@@ -18,7 +18,7 @@ This project implements a performance-optimized Sudoku solver and the supporting
 - Software interrupt / hook
 
 ## Results
-This implementation achieved the best execution times for all (5) tested Sudoku puzzles and amongst all other teams in the course.
+This implementation achieved the best execution times for all (5) tested Sudoku puzzles and amongst all other teams in the course. The results of the tournament, with a 10 MHz CPU clock, are presented below:
 
 | Difficulty | This solver   | Other teams   |
 | ---------- | ------------- | ------------- |
