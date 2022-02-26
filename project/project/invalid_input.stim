@@ -1,0 +1,118 @@
+//initial delay (clock cycles)
+#500
+//log file
+$log TCNT2
+$startlog usart_out_invalid.log
+
+//data to be received from USART
+
+//INVALID COMMAND
+//N1113<CR><LF>
+R15 = 0x4E
+UCSRA = 0x80
+#500
+R15 = 0x31
+UCSRA = 0x80
+#500
+R15 = 0x31
+UCSRA = 0x80
+#500
+R15 = 0x31
+UCSRA = 0x80
+#500
+R15 = 0x33
+UCSRA = 0x80
+#500
+R15 = 0x0D
+UCSRA = 0x80
+#500
+R15 = 0x0A
+UCSRA = 0x80
+#1000
+
+//INVALID COMMAND
+//BC<CR><LF>
+R15 = 0x42
+UCSRA = 0x80
+#500
+R15 = 0x43
+UCSRA = 0x80
+#500
+R15 = 0x0D
+UCSRA = 0x80
+#500
+R15 = 0x0A
+UCSRA = 0x80
+#1000
+
+//N123<CR><LF>
+R15 = 0x4E
+UCSRA = 0x80
+#500
+R15 = 0x31
+UCSRA = 0x80
+#500
+R15 = 0x32
+UCSRA = 0x80
+#500
+R15 = 0x33
+UCSRA = 0x80
+#500
+R15 = 0x0D
+UCSRA = 0x80
+#500
+R15 = 0x0A
+UCSRA = 0x80
+#1000
+
+//P<CR><LF>
+R15 = 0x50
+UCSRA = 0x80
+#500
+R15 = 0x0D
+UCSRA = 0x80
+#500
+R15 = 0x0A
+UCSRA = 0x80
+#1000
+
+//INVALID COMMAND
+//S<CR><LF>
+R15 = 0x53
+UCSRA = 0x80
+#500
+R15 = 0x0D
+UCSRA = 0x80
+#500
+R15 = 0x0A
+UCSRA = 0x80
+#1000
+
+//INVALID COMMAND
+//C<CR><LF>
+R15 = 0x43
+UCSRA = 0x80
+#500
+R15 = 0x0D
+UCSRA = 0x80
+#500
+R15 = 0x0A
+UCSRA = 0x80
+#1000
+
+//INVALID COMMAND
+//TT<CR><LF>
+R15 = 0x54
+UCSRA = 0x80
+#500
+R15 = 0x54
+UCSRA = 0x80
+#500
+R15 = 0x0D
+UCSRA = 0x80
+#500
+R15 = 0x0A
+UCSRA = 0x80
+#1000
+
+$stoplog

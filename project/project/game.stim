@@ -1,0 +1,86 @@
+//initial delay (clock cycles)
+#20000
+//log file
+$log TCNT2
+$startlog game_out.log
+
+//data to be received from USART
+//AT<CR><LF>
+TCNT2 = 0x41
+UCSRA = 0x80
+#500
+TCNT2 = 0x54
+UCSRA = 0x80
+#500
+TCNT2 = 0x0D
+UCSRA = 0x80
+#500
+TCNT2 = 0x0A
+UCSRA = 0x80
+#1000
+
+//C<CR><LF>
+TCNT2 = 0x43
+UCSRA = 0x80
+#500
+TCNT2 = 0x0D
+UCSRA = 0x80
+#500
+TCNT2 = 0x0A
+UCSRA = 0x80
+#1000
+
+//N111<CR><LF>
+TCNT2 = 0x4E
+UCSRA = 0x80
+#500
+TCNT2 = 0x31
+UCSRA = 0x80
+#500
+TCNT2 = 0x31
+UCSRA = 0x80
+#500
+TCNT2 = 0x31
+UCSRA = 0x80
+#500
+TCNT2 = 0x0D
+UCSRA = 0x80
+#500
+TCNT2 = 0x0A
+UCSRA = 0x80
+#1000
+
+//N122<CR><LF>
+TCNT2 = 0x4E
+UCSRA = 0x80
+#500
+TCNT2 = 0x31
+UCSRA = 0x80
+#500
+TCNT2 = 0x32
+UCSRA = 0x80
+#500
+TCNT2 = 0x32
+UCSRA = 0x80
+#500
+TCNT2 = 0x0D
+UCSRA = 0x80
+#500
+TCNT2 = 0x0A
+UCSRA = 0x80
+#1000
+
+
+//P<CR><LF>
+TCNT2 = 0x50
+UCSRA = 0x80
+#500
+TCNT2 = 0x0D
+UCSRA = 0x80
+#500
+TCNT2 = 0x0A
+UCSRA = 0x80
+#1000
+
+
+$stoplog

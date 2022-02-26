@@ -1,0 +1,2947 @@
+
+project.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000f6a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  00000fde  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000107  00800060  00800060  00000fde  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000fde  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001010  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000c0  00000000  00000000  00001050  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000c81  00000000  00000000  00001110  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000006ef  00000000  00000000  00001d91  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000ecd  00000000  00000000  00002480  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000198  00000000  00000000  00003350  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004eb  00000000  00000000  000034e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000004fb  00000000  00000000  000039d3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000090  00000000  00000000  00003ece  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 4c 00 	jmp	0x98	; 0x98 <__ctors_end>
+   4:	0c 94 e5 03 	jmp	0x7ca	; 0x7ca <__vector_1>
+   8:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+   c:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  10:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  14:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  18:	0c 94 e7 03 	jmp	0x7ce	; 0x7ce <__vector_6>
+  1c:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  20:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  24:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  28:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  2c:	0c 94 fb 03 	jmp	0x7f6	; 0x7f6 <__vector_11>
+  30:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  34:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  38:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  3c:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  40:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  44:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  48:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  4c:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  50:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__bad_interrupt>
+  54:	f6 06       	cpc	r15, r22
+  56:	6c 07       	cpc	r22, r28
+  58:	6c 07       	cpc	r22, r28
+  5a:	f9 06       	cpc	r15, r25
+  5c:	6c 07       	cpc	r22, r28
+  5e:	6c 07       	cpc	r22, r28
+  60:	6c 07       	cpc	r22, r28
+  62:	6c 07       	cpc	r22, r28
+  64:	6c 07       	cpc	r22, r28
+  66:	6c 07       	cpc	r22, r28
+  68:	06 07       	cpc	r16, r22
+  6a:	19 07       	cpc	r17, r25
+  6c:	6c 07       	cpc	r22, r28
+  6e:	6c 07       	cpc	r22, r28
+  70:	6c 07       	cpc	r22, r28
+  72:	26 07       	cpc	r18, r22
+  74:	6c 07       	cpc	r22, r28
+  76:	6c 07       	cpc	r22, r28
+  78:	6c 07       	cpc	r22, r28
+  7a:	34 07       	cpc	r19, r20
+  7c:	6c 07       	cpc	r22, r28
+  7e:	6c 07       	cpc	r22, r28
+  80:	6c 07       	cpc	r22, r28
+  82:	6c 07       	cpc	r22, r28
+  84:	6c 07       	cpc	r22, r28
+  86:	6c 07       	cpc	r22, r28
+  88:	6c 07       	cpc	r22, r28
+  8a:	59 07       	cpc	r21, r25
+  8c:	6c 07       	cpc	r22, r28
+  8e:	6c 07       	cpc	r22, r28
+  90:	6c 07       	cpc	r22, r28
+  92:	6c 07       	cpc	r22, r28
+  94:	6c 07       	cpc	r22, r28
+  96:	62 07       	cpc	r22, r18
+
+00000098 <__ctors_end>:
+  98:	11 24       	eor	r1, r1
+  9a:	1f be       	out	0x3f, r1	; 63
+  9c:	cf e5       	ldi	r28, 0x5F	; 95
+  9e:	d4 e0       	ldi	r29, 0x04	; 4
+  a0:	de bf       	out	0x3e, r29	; 62
+  a2:	cd bf       	out	0x3d, r28	; 61
+
+000000a4 <__do_clear_bss>:
+  a4:	21 e0       	ldi	r18, 0x01	; 1
+  a6:	a0 e6       	ldi	r26, 0x60	; 96
+  a8:	b0 e0       	ldi	r27, 0x00	; 0
+  aa:	01 c0       	rjmp	.+2      	; 0xae <.do_clear_bss_start>
+
+000000ac <.do_clear_bss_loop>:
+  ac:	1d 92       	st	X+, r1
+
+000000ae <.do_clear_bss_start>:
+  ae:	a7 36       	cpi	r26, 0x67	; 103
+  b0:	b2 07       	cpc	r27, r18
+  b2:	e1 f7       	brne	.-8      	; 0xac <.do_clear_bss_loop>
+  b4:	0e 94 6d 07 	call	0xeda	; 0xeda <main>
+  b8:	0c 94 b3 07 	jmp	0xf66	; 0xf66 <_exit>
+
+000000bc <__bad_interrupt>:
+  bc:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000c0 <sudoku_solver>:
+
+
+sudoku_solver:
+
+	; Mixing Assembly and C conventions (save registers)
+	push R0
+  c0:	0f 92       	push	r0
+	push R2
+  c2:	2f 92       	push	r2
+	push R3
+  c4:	3f 92       	push	r3
+	push R4
+  c6:	4f 92       	push	r4
+	push R5
+  c8:	5f 92       	push	r5
+	push R6
+  ca:	6f 92       	push	r6
+	push R7
+  cc:	7f 92       	push	r7
+	push R8
+  ce:	8f 92       	push	r8
+	push R9
+  d0:	9f 92       	push	r9
+	push R10
+  d2:	af 92       	push	r10
+	push R11
+  d4:	bf 92       	push	r11
+	push R12
+  d6:	cf 92       	push	r12
+	push R13
+  d8:	df 92       	push	r13
+	push R14
+  da:	ef 92       	push	r14
+	push R15
+  dc:	ff 92       	push	r15
+	push R16
+  de:	0f 93       	push	r16
+	push R17
+  e0:	1f 93       	push	r17
+	push R28
+  e2:	cf 93       	push	r28
+	push R29
+  e4:	df 93       	push	r29
+	
+	; Restore Register File (+PC, +SREG) from image or initialize
+	; -----------------------------------------------------------
+	lds temp, solver_guard
+  e6:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <solver_guard>
+	sbrs temp, 1
+  ea:	91 ff       	sbrs	r25, 1
+	rjmp initialize
+  ec:	4d c0       	rjmp	.+154    	; 0x188 <initialize>
+		
+		; Clear the image flag
+		cbr temp, 1 << 1
+  ee:	9d 7f       	andi	r25, 0xFD	; 253
+		sts solver_guard, temp
+  f0:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <solver_guard>
+
+		; Restore from image
+		; Restore PC to stack
+		lds R16, solver_image+34
+  f4:	00 91 65 01 	lds	r16, 0x0165	; 0x800165 <solver_image+0x22>
+		push R16
+  f8:	0f 93       	push	r16
+		lds R16, solver_image+33
+  fa:	00 91 64 01 	lds	r16, 0x0164	; 0x800164 <solver_image+0x21>
+		push R16
+  fe:	0f 93       	push	r16
+		; Restore SREG
+		lds R16, solver_image+32
+ 100:	00 91 63 01 	lds	r16, 0x0163	; 0x800163 <solver_image+0x20>
+		out SREG, R16
+ 104:	0f bf       	out	0x3f, r16	; 63
+		; Restore Register File
+		lds R0, solver_image+0
+ 106:	00 90 43 01 	lds	r0, 0x0143	; 0x800143 <solver_image>
+		lds R1, solver_image+1
+ 10a:	10 90 44 01 	lds	r1, 0x0144	; 0x800144 <solver_image+0x1>
+		lds R2, solver_image+2
+ 10e:	20 90 45 01 	lds	r2, 0x0145	; 0x800145 <solver_image+0x2>
+		lds R3, solver_image+3
+ 112:	30 90 46 01 	lds	r3, 0x0146	; 0x800146 <solver_image+0x3>
+		lds R4, solver_image+4
+ 116:	40 90 47 01 	lds	r4, 0x0147	; 0x800147 <solver_image+0x4>
+		lds R5, solver_image+5
+ 11a:	50 90 48 01 	lds	r5, 0x0148	; 0x800148 <solver_image+0x5>
+		lds R6, solver_image+6
+ 11e:	60 90 49 01 	lds	r6, 0x0149	; 0x800149 <solver_image+0x6>
+		lds R7, solver_image+7
+ 122:	70 90 4a 01 	lds	r7, 0x014A	; 0x80014a <solver_image+0x7>
+		lds R8, solver_image+8
+ 126:	80 90 4b 01 	lds	r8, 0x014B	; 0x80014b <solver_image+0x8>
+		lds R9, solver_image+9
+ 12a:	90 90 4c 01 	lds	r9, 0x014C	; 0x80014c <solver_image+0x9>
+		lds R10, solver_image+10
+ 12e:	a0 90 4d 01 	lds	r10, 0x014D	; 0x80014d <solver_image+0xa>
+		lds R11, solver_image+11
+ 132:	b0 90 4e 01 	lds	r11, 0x014E	; 0x80014e <solver_image+0xb>
+		lds R12, solver_image+12
+ 136:	c0 90 4f 01 	lds	r12, 0x014F	; 0x80014f <solver_image+0xc>
+		lds R13, solver_image+13
+ 13a:	d0 90 50 01 	lds	r13, 0x0150	; 0x800150 <solver_image+0xd>
+		lds R14, solver_image+14
+ 13e:	e0 90 51 01 	lds	r14, 0x0151	; 0x800151 <solver_image+0xe>
+		lds R15, solver_image+15
+ 142:	f0 90 52 01 	lds	r15, 0x0152	; 0x800152 <solver_image+0xf>
+		lds R16, solver_image+16
+ 146:	00 91 53 01 	lds	r16, 0x0153	; 0x800153 <solver_image+0x10>
+		lds R17, solver_image+17
+ 14a:	10 91 54 01 	lds	r17, 0x0154	; 0x800154 <solver_image+0x11>
+		lds R18, solver_image+18
+ 14e:	20 91 55 01 	lds	r18, 0x0155	; 0x800155 <solver_image+0x12>
+		lds R19, solver_image+19
+ 152:	30 91 56 01 	lds	r19, 0x0156	; 0x800156 <solver_image+0x13>
+		lds R20, solver_image+20
+ 156:	40 91 57 01 	lds	r20, 0x0157	; 0x800157 <solver_image+0x14>
+		lds R21, solver_image+21
+ 15a:	50 91 58 01 	lds	r21, 0x0158	; 0x800158 <solver_image+0x15>
+		lds R22, solver_image+22
+ 15e:	60 91 59 01 	lds	r22, 0x0159	; 0x800159 <solver_image+0x16>
+		lds R23, solver_image+23
+ 162:	70 91 5a 01 	lds	r23, 0x015A	; 0x80015a <solver_image+0x17>
+		lds R24, solver_image+24
+ 166:	80 91 5b 01 	lds	r24, 0x015B	; 0x80015b <solver_image+0x18>
+		lds R25, solver_image+25
+ 16a:	90 91 5c 01 	lds	r25, 0x015C	; 0x80015c <solver_image+0x19>
+		lds R26, solver_image+26
+ 16e:	a0 91 5d 01 	lds	r26, 0x015D	; 0x80015d <solver_image+0x1a>
+		lds R27, solver_image+27
+ 172:	b0 91 5e 01 	lds	r27, 0x015E	; 0x80015e <solver_image+0x1b>
+		lds R28, solver_image+28
+ 176:	c0 91 5f 01 	lds	r28, 0x015F	; 0x80015f <solver_image+0x1c>
+		lds R29, solver_image+29
+ 17a:	d0 91 60 01 	lds	r29, 0x0160	; 0x800160 <solver_image+0x1d>
+		lds R30, solver_image+30
+ 17e:	e0 91 61 01 	lds	r30, 0x0161	; 0x800161 <solver_image+0x1e>
+		lds R31, solver_image+31
+ 182:	f0 91 62 01 	lds	r31, 0x0162	; 0x800162 <solver_image+0x1f>
+		; Restore PC to the pushed value (by "returning")
+		ret
+ 186:	08 95       	ret
+
+00000188 <initialize>:
+
+	; Initialize
+	initialize:
+		lds temp, solver_input+9*RS
+ 188:	90 91 41 01 	lds	r25, 0x0141	; 0x800141 <solver_input+0x87>
+		mov NCM, temp
+ 18c:	c9 2f       	mov	r28, r25
+
+		lds temp, solver_input+9*RS+1
+ 18e:	90 91 42 01 	lds	r25, 0x0142	; 0x800142 <solver_input+0x88>
+		mov FCC, temp
+ 192:	d9 2f       	mov	r29, r25
+	
+		clr temp
+ 194:	99 27       	eor	r25, r25
+		clr CRM
+ 196:	aa 24       	eor	r10, r10
+		clr CBM_1
+ 198:	bb 24       	eor	r11, r11
+		clr CBM_2
+ 19a:	cc 24       	eor	r12, r12
+		clr CBM_3
+ 19c:	dd 24       	eor	r13, r13
+		clr CRCE
+ 19e:	ee 24       	eor	r14, r14
+		clr CRVD
+ 1a0:	bb 27       	eor	r27, r27
+		clr MDR
+ 1a2:	aa 27       	eor	r26, r26
+		
+		clr mask_1
+ 1a4:	11 24       	eor	r1, r1
+		clr digit_1
+ 1a6:	00 27       	eor	r16, r16
+		clr mask_2
+ 1a8:	22 24       	eor	r2, r2
+		clr digit_2
+ 1aa:	11 27       	eor	r17, r17
+		clr mask_3
+ 1ac:	33 24       	eor	r3, r3
+		clr digit_3
+ 1ae:	22 27       	eor	r18, r18
+		clr mask_4
+ 1b0:	44 24       	eor	r4, r4
+		clr digit_4
+ 1b2:	33 27       	eor	r19, r19
+		clr mask_5
+ 1b4:	55 24       	eor	r5, r5
+		clr digit_5
+ 1b6:	44 27       	eor	r20, r20
+		clr mask_6
+ 1b8:	66 24       	eor	r6, r6
+		clr digit_6
+ 1ba:	55 27       	eor	r21, r21
+		clr mask_7
+ 1bc:	77 24       	eor	r7, r7
+		clr digit_7
+ 1be:	66 27       	eor	r22, r22
+		clr mask_8
+ 1c0:	88 24       	eor	r8, r8
+		clr digit_8
+ 1c2:	77 27       	eor	r23, r23
+		clr mask_9
+ 1c4:	99 24       	eor	r9, r9
+		clr digit_9
+ 1c6:	88 27       	eor	r24, r24
+
+		ldi ZH, hi8(solver_input - 2*RS)
+ 1c8:	f0 e0       	ldi	r31, 0x00	; 0
+		ldi ZL, lo8(solver_input - 2*RS)
+ 1ca:	ec e9       	ldi	r30, 0x9C	; 156
+
+000001cc <end_restore_initialize>:
+
+	end_restore_initialize:
+
+	; Set the guard
+	ldi temp, 1
+ 1cc:	91 e0       	ldi	r25, 0x01	; 1
+	sts solver_guard, temp
+ 1ce:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <solver_guard>
+	clr temp
+ 1d2:	99 27       	eor	r25, r25
+
+000001d4 <CODE_BLOCK_START_0>:
+
+	; ====== SOLVER ALGORITHM ======
+	solver_block	1, mask_1, digit_1, 1, CBM_1, 9, mask_9, digit_9, 3, CODE_BLOCK_START_1, LEGAL_DIGIT_LOOP_8, BACKTRACKING_TRANSITION_8
+ 1d4:	d2 3a       	cpi	r29, 0xA2	; 162
+ 1d6:	08 f0       	brcs	.+2      	; 0x1da <end_termination_condition0>
+ 1d8:	15 c2       	rjmp	.+1066   	; 0x604 <ALGORITHM_END>
+
+000001da <end_termination_condition0>:
+ 1da:	3f 96       	adiw	r30, 0x0f	; 15
+ 1dc:	b0 95       	com	r27
+ 1de:	90 e4       	ldi	r25, 0x40	; 64
+ 1e0:	a9 27       	eor	r26, r25
+ 1e2:	e7 84       	ldd	r14, Z+15	; 0x0f
+ 1e4:	90 89       	ldd	r25, Z+16	; 0x10
+ 1e6:	a1 88       	ldd	r10, Z+17	; 0x11
+ 1e8:	90 fb       	bst	r25, 0
+ 1ea:	36 f4       	brtc	.+12     	; 0x1f8 <end_first_row_in_band_load0>
+ 1ec:	b3 8c       	ldd	r11, Z+27	; 0x1b
+ 1ee:	c4 8c       	ldd	r12, Z+28	; 0x1c
+ 1f0:	d5 8c       	ldd	r13, Z+29	; 0x1d
+ 1f2:	9f 73       	andi	r25, 0x3F	; 63
+ 1f4:	a0 7c       	andi	r26, 0xC0	; 192
+ 1f6:	a9 2b       	or	r26, r25
+
+000001f8 <end_first_row_in_band_load0>:
+ 1f8:	1e f0       	brts	.+6      	; 0x200 <end_not_first_row_in_band0>
+ 1fa:	91 73       	andi	r25, 0x31	; 49
+ 1fc:	ae 7c       	andi	r26, 0xCE	; 206
+ 1fe:	a9 2b       	or	r26, r25
+
+00000200 <end_not_first_row_in_band0>:
+ 200:	b0 fb       	bst	r27, 0
+ 202:	66 f0       	brts	.+24     	; 0x21c <end_frame_push0>
+ 204:	1f 92       	push	r1
+ 206:	0f 93       	push	r16
+ 208:	93 81       	ldd	r25, Z+3	; 0x03
+ 20a:	00 23       	and	r16, r16
+ 20c:	11 f4       	brne	.+4      	; 0x212 <end_digit_is_zero0>
+ 20e:	ce 7f       	andi	r28, 0xFE	; 254
+ 210:	03 c0       	rjmp	.+6      	; 0x218 <end_digit_is_other0>
+
+00000212 <end_digit_is_zero0>:
+ 212:	06 fd       	sbrc	r16, 6
+ 214:	0a f0       	brmi	.+2      	; 0x218 <end_digit_is_other0>
+
+00000216 <end_digit_is_FF0>:
+ 216:	90 27       	eor	r25, r16
+
+00000218 <end_digit_is_other0>:
+ 218:	92 8b       	std	Z+18, r25	; 0x12
+ 21a:	b1 60       	ori	r27, 0x01	; 1
+
+0000021c <end_frame_push0>:
+ 21c:	0f ef       	ldi	r16, 0xFF	; 255
+ 21e:	e0 fe       	sbrs	r14, 0
+ 220:	36 c0       	rjmp	.+108    	; 0x28e <CODE_BLOCK_START_1>
+ 222:	de 5f       	subi	r29, 0xFE	; 254
+ 224:	12 88       	ldd	r1, Z+18	; 0x12
+ 226:	1a 20       	and	r1, r10
+ 228:	1b 20       	and	r1, r11
+ 22a:	00 27       	eor	r16, r16
+ 22c:	a5 fb       	bst	r26, 5
+ 22e:	3e f4       	brtc	.+14     	; 0x23e <LEGAL_DIGIT_LOOP_0>
+ 230:	a1 fb       	bst	r26, 1
+ 232:	2e f4       	brtc	.+10     	; 0x23e <LEGAL_DIGIT_LOOP_0>
+ 234:	c0 fb       	bst	r28, 0
+ 236:	1e f4       	brtc	.+6      	; 0x23e <LEGAL_DIGIT_LOOP_0>
+ 238:	ad 7d       	andi	r26, 0xDD	; 221
+ 23a:	ce 7f       	andi	r28, 0xFE	; 254
+ 23c:	28 c0       	rjmp	.+80     	; 0x28e <CODE_BLOCK_START_1>
+
+0000023e <LEGAL_DIGIT_LOOP_0>:
+ 23e:	10 26       	eor	r1, r16
+ 240:	f9 f4       	brne	.+62     	; 0x280 <end_mask_empty_check0>
+ 242:	a0 26       	eor	r10, r16
+ 244:	b0 26       	eor	r11, r16
+ 246:	d2 50       	subi	r29, 0x02	; 2
+
+00000248 <BACKTRACKING_TRANSITION_0>:
+ 248:	b0 95       	com	r27
+ 24a:	90 e4       	ldi	r25, 0x40	; 64
+ 24c:	a9 27       	eor	r26, r25
+ 24e:	aa 24       	eor	r10, r10
+ 250:	a0 fb       	bst	r26, 0
+ 252:	e0 80       	ld	r14, Z
+ 254:	91 81       	ldd	r25, Z+1	; 0x01
+ 256:	9f 71       	andi	r25, 0x1F	; 31
+ 258:	a0 7c       	andi	r26, 0xC0	; 192
+ 25a:	a9 2b       	or	r26, r25
+ 25c:	26 f4       	brtc	.+8      	; 0x266 <end_band_initialization0>
+ 25e:	bb 24       	eor	r11, r11
+ 260:	cc 24       	eor	r12, r12
+ 262:	dd 24       	eor	r13, r13
+ 264:	a1 7f       	andi	r26, 0xF1	; 241
+
+00000266 <end_band_initialization0>:
+ 266:	3f 97       	sbiw	r30, 0x0f	; 15
+ 268:	a6 fb       	bst	r26, 6
+ 26a:	1e f0       	brts	.+6      	; 0x272 <end_preceding_block_clue_check_0>
+ 26c:	8f 91       	pop	r24
+ 26e:	9f 90       	pop	r9
+ 270:	a0 64       	ori	r26, 0x40	; 64
+
+00000272 <end_preceding_block_clue_check_0>:
+ 272:	a4 ff       	sbrs	r26, 4
+ 274:	b1 c1       	rjmp	.+866    	; 0x5d8 <BACKTRACKING_TRANSITION_8>
+ 276:	88 23       	and	r24, r24
+ 278:	11 f4       	brne	.+4      	; 0x27e <end_prec_digit_9_check0>
+ 27a:	a8 62       	ori	r26, 0x28	; 40
+ 27c:	d0 60       	ori	r29, 0x00	; 0
+
+0000027e <end_prec_digit_9_check0>:
+ 27e:	a7 c1       	rjmp	.+846    	; 0x5ce <LEGAL_DIGIT_LOOP_8>
+
+00000280 <end_mask_empty_check0>:
+ 280:	90 2f       	mov	r25, r16
+ 282:	01 2d       	mov	r16, r1
+ 284:	01 95       	neg	r16
+ 286:	01 21       	and	r16, r1
+ 288:	90 2b       	or	r25, r16
+ 28a:	a9 26       	eor	r10, r25
+ 28c:	b9 26       	eor	r11, r25
+
+0000028e <CODE_BLOCK_START_1>:
+	solver_block	2, mask_2, digit_2, 1, CBM_1, 1, mask_1, digit_1, 1, CODE_BLOCK_START_2, LEGAL_DIGIT_LOOP_0, BACKTRACKING_TRANSITION_0
+ 28e:	b1 fb       	bst	r27, 1
+ 290:	66 f0       	brts	.+24     	; 0x2aa <end_frame_push1>
+ 292:	2f 92       	push	r2
+ 294:	1f 93       	push	r17
+ 296:	94 81       	ldd	r25, Z+4	; 0x04
+ 298:	11 23       	and	r17, r17
+ 29a:	11 f4       	brne	.+4      	; 0x2a0 <end_digit_is_zero1>
+ 29c:	cd 7f       	andi	r28, 0xFD	; 253
+ 29e:	03 c0       	rjmp	.+6      	; 0x2a6 <end_digit_is_other1>
+
+000002a0 <end_digit_is_zero1>:
+ 2a0:	16 fd       	sbrc	r17, 6
+ 2a2:	0a f0       	brmi	.+2      	; 0x2a6 <end_digit_is_other1>
+
+000002a4 <end_digit_is_FF1>:
+ 2a4:	91 27       	eor	r25, r17
+
+000002a6 <end_digit_is_other1>:
+ 2a6:	93 8b       	std	Z+19, r25	; 0x13
+ 2a8:	b2 60       	ori	r27, 0x02	; 2
+
+000002aa <end_frame_push1>:
+ 2aa:	1f ef       	ldi	r17, 0xFF	; 255
+ 2ac:	e1 fe       	sbrs	r14, 1
+ 2ae:	26 c0       	rjmp	.+76     	; 0x2fc <CODE_BLOCK_START_2>
+ 2b0:	de 5f       	subi	r29, 0xFE	; 254
+ 2b2:	23 88       	ldd	r2, Z+19	; 0x13
+ 2b4:	2a 20       	and	r2, r10
+ 2b6:	2b 20       	and	r2, r11
+ 2b8:	11 27       	eor	r17, r17
+ 2ba:	a5 fb       	bst	r26, 5
+ 2bc:	3e f4       	brtc	.+14     	; 0x2cc <LEGAL_DIGIT_LOOP_1>
+ 2be:	a1 fb       	bst	r26, 1
+ 2c0:	2e f4       	brtc	.+10     	; 0x2cc <LEGAL_DIGIT_LOOP_1>
+ 2c2:	c1 fb       	bst	r28, 1
+ 2c4:	1e f4       	brtc	.+6      	; 0x2cc <LEGAL_DIGIT_LOOP_1>
+ 2c6:	ad 7d       	andi	r26, 0xDD	; 221
+ 2c8:	cd 7f       	andi	r28, 0xFD	; 253
+ 2ca:	18 c0       	rjmp	.+48     	; 0x2fc <CODE_BLOCK_START_2>
+
+000002cc <LEGAL_DIGIT_LOOP_1>:
+ 2cc:	21 26       	eor	r2, r17
+ 2ce:	79 f4       	brne	.+30     	; 0x2ee <end_mask_empty_check1>
+ 2d0:	a1 26       	eor	r10, r17
+ 2d2:	b1 26       	eor	r11, r17
+ 2d4:	d2 50       	subi	r29, 0x02	; 2
+
+000002d6 <BACKTRACKING_TRANSITION_1>:
+ 2d6:	b0 fb       	bst	r27, 0
+ 2d8:	1e f0       	brts	.+6      	; 0x2e0 <end_preceding_block_clue_check_1>
+ 2da:	0f 91       	pop	r16
+ 2dc:	1f 90       	pop	r1
+ 2de:	b1 60       	ori	r27, 0x01	; 1
+
+000002e0 <end_preceding_block_clue_check_1>:
+ 2e0:	e0 fe       	sbrs	r14, 0
+ 2e2:	b2 cf       	rjmp	.-156    	; 0x248 <BACKTRACKING_TRANSITION_0>
+ 2e4:	00 23       	and	r16, r16
+ 2e6:	11 f4       	brne	.+4      	; 0x2ec <end_prec_digit_9_check1>
+ 2e8:	a2 62       	ori	r26, 0x22	; 34
+ 2ea:	c1 60       	ori	r28, 0x01	; 1
+
+000002ec <end_prec_digit_9_check1>:
+ 2ec:	a8 cf       	rjmp	.-176    	; 0x23e <LEGAL_DIGIT_LOOP_0>
+
+000002ee <end_mask_empty_check1>:
+ 2ee:	91 2f       	mov	r25, r17
+ 2f0:	12 2d       	mov	r17, r2
+ 2f2:	11 95       	neg	r17
+ 2f4:	12 21       	and	r17, r2
+ 2f6:	91 2b       	or	r25, r17
+ 2f8:	a9 26       	eor	r10, r25
+ 2fa:	b9 26       	eor	r11, r25
+
+000002fc <CODE_BLOCK_START_2>:
+	solver_block	3, mask_3, digit_3, 1, CBM_1, 2, mask_2, digit_2, 1, CODE_BLOCK_START_3, LEGAL_DIGIT_LOOP_1, BACKTRACKING_TRANSITION_1
+ 2fc:	b2 fb       	bst	r27, 2
+ 2fe:	66 f0       	brts	.+24     	; 0x318 <end_frame_push2>
+ 300:	3f 92       	push	r3
+ 302:	2f 93       	push	r18
+ 304:	95 81       	ldd	r25, Z+5	; 0x05
+ 306:	22 23       	and	r18, r18
+ 308:	11 f4       	brne	.+4      	; 0x30e <end_digit_is_zero2>
+ 30a:	cb 7f       	andi	r28, 0xFB	; 251
+ 30c:	03 c0       	rjmp	.+6      	; 0x314 <end_digit_is_other2>
+
+0000030e <end_digit_is_zero2>:
+ 30e:	26 fd       	sbrc	r18, 6
+ 310:	0a f0       	brmi	.+2      	; 0x314 <end_digit_is_other2>
+
+00000312 <end_digit_is_FF2>:
+ 312:	92 27       	eor	r25, r18
+
+00000314 <end_digit_is_other2>:
+ 314:	94 8b       	std	Z+20, r25	; 0x14
+ 316:	b4 60       	ori	r27, 0x04	; 4
+
+00000318 <end_frame_push2>:
+ 318:	2f ef       	ldi	r18, 0xFF	; 255
+ 31a:	e2 fe       	sbrs	r14, 2
+ 31c:	26 c0       	rjmp	.+76     	; 0x36a <CODE_BLOCK_START_3>
+ 31e:	de 5f       	subi	r29, 0xFE	; 254
+ 320:	34 88       	ldd	r3, Z+20	; 0x14
+ 322:	3a 20       	and	r3, r10
+ 324:	3b 20       	and	r3, r11
+ 326:	22 27       	eor	r18, r18
+ 328:	a5 fb       	bst	r26, 5
+ 32a:	3e f4       	brtc	.+14     	; 0x33a <LEGAL_DIGIT_LOOP_2>
+ 32c:	a1 fb       	bst	r26, 1
+ 32e:	2e f4       	brtc	.+10     	; 0x33a <LEGAL_DIGIT_LOOP_2>
+ 330:	c2 fb       	bst	r28, 2
+ 332:	1e f4       	brtc	.+6      	; 0x33a <LEGAL_DIGIT_LOOP_2>
+ 334:	ad 7d       	andi	r26, 0xDD	; 221
+ 336:	cb 7f       	andi	r28, 0xFB	; 251
+ 338:	18 c0       	rjmp	.+48     	; 0x36a <CODE_BLOCK_START_3>
+
+0000033a <LEGAL_DIGIT_LOOP_2>:
+ 33a:	32 26       	eor	r3, r18
+ 33c:	79 f4       	brne	.+30     	; 0x35c <end_mask_empty_check2>
+ 33e:	a2 26       	eor	r10, r18
+ 340:	b2 26       	eor	r11, r18
+ 342:	d2 50       	subi	r29, 0x02	; 2
+
+00000344 <BACKTRACKING_TRANSITION_2>:
+ 344:	b1 fb       	bst	r27, 1
+ 346:	1e f0       	brts	.+6      	; 0x34e <end_preceding_block_clue_check_2>
+ 348:	1f 91       	pop	r17
+ 34a:	2f 90       	pop	r2
+ 34c:	b2 60       	ori	r27, 0x02	; 2
+
+0000034e <end_preceding_block_clue_check_2>:
+ 34e:	e1 fe       	sbrs	r14, 1
+ 350:	c2 cf       	rjmp	.-124    	; 0x2d6 <BACKTRACKING_TRANSITION_1>
+ 352:	11 23       	and	r17, r17
+ 354:	11 f4       	brne	.+4      	; 0x35a <end_prec_digit_9_check2>
+ 356:	a2 62       	ori	r26, 0x22	; 34
+ 358:	c2 60       	ori	r28, 0x02	; 2
+
+0000035a <end_prec_digit_9_check2>:
+ 35a:	b8 cf       	rjmp	.-144    	; 0x2cc <LEGAL_DIGIT_LOOP_1>
+
+0000035c <end_mask_empty_check2>:
+ 35c:	92 2f       	mov	r25, r18
+ 35e:	23 2d       	mov	r18, r3
+ 360:	21 95       	neg	r18
+ 362:	23 21       	and	r18, r3
+ 364:	92 2b       	or	r25, r18
+ 366:	a9 26       	eor	r10, r25
+ 368:	b9 26       	eor	r11, r25
+
+0000036a <CODE_BLOCK_START_3>:
+
+	solver_block	4, mask_4, digit_4, 2, CBM_2, 3, mask_3, digit_3, 1, CODE_BLOCK_START_4, LEGAL_DIGIT_LOOP_2, BACKTRACKING_TRANSITION_2
+ 36a:	b3 fb       	bst	r27, 3
+ 36c:	66 f0       	brts	.+24     	; 0x386 <end_frame_push3>
+ 36e:	4f 92       	push	r4
+ 370:	3f 93       	push	r19
+ 372:	96 81       	ldd	r25, Z+6	; 0x06
+ 374:	33 23       	and	r19, r19
+ 376:	11 f4       	brne	.+4      	; 0x37c <end_digit_is_zero3>
+ 378:	c7 7f       	andi	r28, 0xF7	; 247
+ 37a:	03 c0       	rjmp	.+6      	; 0x382 <end_digit_is_other3>
+
+0000037c <end_digit_is_zero3>:
+ 37c:	36 fd       	sbrc	r19, 6
+ 37e:	0a f0       	brmi	.+2      	; 0x382 <end_digit_is_other3>
+
+00000380 <end_digit_is_FF3>:
+ 380:	93 27       	eor	r25, r19
+
+00000382 <end_digit_is_other3>:
+ 382:	95 8b       	std	Z+21, r25	; 0x15
+ 384:	b8 60       	ori	r27, 0x08	; 8
+
+00000386 <end_frame_push3>:
+ 386:	3f ef       	ldi	r19, 0xFF	; 255
+ 388:	e3 fe       	sbrs	r14, 3
+ 38a:	26 c0       	rjmp	.+76     	; 0x3d8 <CODE_BLOCK_START_4>
+ 38c:	de 5f       	subi	r29, 0xFE	; 254
+ 38e:	45 88       	ldd	r4, Z+21	; 0x15
+ 390:	4a 20       	and	r4, r10
+ 392:	4c 20       	and	r4, r12
+ 394:	33 27       	eor	r19, r19
+ 396:	a5 fb       	bst	r26, 5
+ 398:	3e f4       	brtc	.+14     	; 0x3a8 <LEGAL_DIGIT_LOOP_3>
+ 39a:	a2 fb       	bst	r26, 2
+ 39c:	2e f4       	brtc	.+10     	; 0x3a8 <LEGAL_DIGIT_LOOP_3>
+ 39e:	c3 fb       	bst	r28, 3
+ 3a0:	1e f4       	brtc	.+6      	; 0x3a8 <LEGAL_DIGIT_LOOP_3>
+ 3a2:	ab 7d       	andi	r26, 0xDB	; 219
+ 3a4:	c7 7f       	andi	r28, 0xF7	; 247
+ 3a6:	18 c0       	rjmp	.+48     	; 0x3d8 <CODE_BLOCK_START_4>
+
+000003a8 <LEGAL_DIGIT_LOOP_3>:
+ 3a8:	43 26       	eor	r4, r19
+ 3aa:	79 f4       	brne	.+30     	; 0x3ca <end_mask_empty_check3>
+ 3ac:	a3 26       	eor	r10, r19
+ 3ae:	c3 26       	eor	r12, r19
+ 3b0:	d2 50       	subi	r29, 0x02	; 2
+
+000003b2 <BACKTRACKING_TRANSITION_3>:
+ 3b2:	b2 fb       	bst	r27, 2
+ 3b4:	1e f0       	brts	.+6      	; 0x3bc <end_preceding_block_clue_check_3>
+ 3b6:	2f 91       	pop	r18
+ 3b8:	3f 90       	pop	r3
+ 3ba:	b4 60       	ori	r27, 0x04	; 4
+
+000003bc <end_preceding_block_clue_check_3>:
+ 3bc:	e2 fe       	sbrs	r14, 2
+ 3be:	c2 cf       	rjmp	.-124    	; 0x344 <BACKTRACKING_TRANSITION_2>
+ 3c0:	22 23       	and	r18, r18
+ 3c2:	11 f4       	brne	.+4      	; 0x3c8 <end_prec_digit_9_check3>
+ 3c4:	a2 62       	ori	r26, 0x22	; 34
+ 3c6:	c4 60       	ori	r28, 0x04	; 4
+
+000003c8 <end_prec_digit_9_check3>:
+ 3c8:	b8 cf       	rjmp	.-144    	; 0x33a <LEGAL_DIGIT_LOOP_2>
+
+000003ca <end_mask_empty_check3>:
+ 3ca:	93 2f       	mov	r25, r19
+ 3cc:	34 2d       	mov	r19, r4
+ 3ce:	31 95       	neg	r19
+ 3d0:	34 21       	and	r19, r4
+ 3d2:	93 2b       	or	r25, r19
+ 3d4:	a9 26       	eor	r10, r25
+ 3d6:	c9 26       	eor	r12, r25
+
+000003d8 <CODE_BLOCK_START_4>:
+	solver_block	5, mask_5, digit_5, 2, CBM_2, 4, mask_4, digit_4, 2, CODE_BLOCK_START_5, LEGAL_DIGIT_LOOP_3, BACKTRACKING_TRANSITION_3
+ 3d8:	b4 fb       	bst	r27, 4
+ 3da:	66 f0       	brts	.+24     	; 0x3f4 <end_frame_push4>
+ 3dc:	5f 92       	push	r5
+ 3de:	4f 93       	push	r20
+ 3e0:	97 81       	ldd	r25, Z+7	; 0x07
+ 3e2:	44 23       	and	r20, r20
+ 3e4:	11 f4       	brne	.+4      	; 0x3ea <end_digit_is_zero4>
+ 3e6:	cf 7e       	andi	r28, 0xEF	; 239
+ 3e8:	03 c0       	rjmp	.+6      	; 0x3f0 <end_digit_is_other4>
+
+000003ea <end_digit_is_zero4>:
+ 3ea:	46 fd       	sbrc	r20, 6
+ 3ec:	0a f0       	brmi	.+2      	; 0x3f0 <end_digit_is_other4>
+
+000003ee <end_digit_is_FF4>:
+ 3ee:	94 27       	eor	r25, r20
+
+000003f0 <end_digit_is_other4>:
+ 3f0:	96 8b       	std	Z+22, r25	; 0x16
+ 3f2:	b0 61       	ori	r27, 0x10	; 16
+
+000003f4 <end_frame_push4>:
+ 3f4:	4f ef       	ldi	r20, 0xFF	; 255
+ 3f6:	e4 fe       	sbrs	r14, 4
+ 3f8:	26 c0       	rjmp	.+76     	; 0x446 <CODE_BLOCK_START_5>
+ 3fa:	de 5f       	subi	r29, 0xFE	; 254
+ 3fc:	56 88       	ldd	r5, Z+22	; 0x16
+ 3fe:	5a 20       	and	r5, r10
+ 400:	5c 20       	and	r5, r12
+ 402:	44 27       	eor	r20, r20
+ 404:	a5 fb       	bst	r26, 5
+ 406:	3e f4       	brtc	.+14     	; 0x416 <LEGAL_DIGIT_LOOP_4>
+ 408:	a2 fb       	bst	r26, 2
+ 40a:	2e f4       	brtc	.+10     	; 0x416 <LEGAL_DIGIT_LOOP_4>
+ 40c:	c4 fb       	bst	r28, 4
+ 40e:	1e f4       	brtc	.+6      	; 0x416 <LEGAL_DIGIT_LOOP_4>
+ 410:	ab 7d       	andi	r26, 0xDB	; 219
+ 412:	cf 7e       	andi	r28, 0xEF	; 239
+ 414:	18 c0       	rjmp	.+48     	; 0x446 <CODE_BLOCK_START_5>
+
+00000416 <LEGAL_DIGIT_LOOP_4>:
+ 416:	54 26       	eor	r5, r20
+ 418:	79 f4       	brne	.+30     	; 0x438 <end_mask_empty_check4>
+ 41a:	a4 26       	eor	r10, r20
+ 41c:	c4 26       	eor	r12, r20
+ 41e:	d2 50       	subi	r29, 0x02	; 2
+
+00000420 <BACKTRACKING_TRANSITION_4>:
+ 420:	b3 fb       	bst	r27, 3
+ 422:	1e f0       	brts	.+6      	; 0x42a <end_preceding_block_clue_check_4>
+ 424:	3f 91       	pop	r19
+ 426:	4f 90       	pop	r4
+ 428:	b8 60       	ori	r27, 0x08	; 8
+
+0000042a <end_preceding_block_clue_check_4>:
+ 42a:	e3 fe       	sbrs	r14, 3
+ 42c:	c2 cf       	rjmp	.-124    	; 0x3b2 <BACKTRACKING_TRANSITION_3>
+ 42e:	33 23       	and	r19, r19
+ 430:	11 f4       	brne	.+4      	; 0x436 <end_prec_digit_9_check4>
+ 432:	a4 62       	ori	r26, 0x24	; 36
+ 434:	c8 60       	ori	r28, 0x08	; 8
+
+00000436 <end_prec_digit_9_check4>:
+ 436:	b8 cf       	rjmp	.-144    	; 0x3a8 <LEGAL_DIGIT_LOOP_3>
+
+00000438 <end_mask_empty_check4>:
+ 438:	94 2f       	mov	r25, r20
+ 43a:	45 2d       	mov	r20, r5
+ 43c:	41 95       	neg	r20
+ 43e:	45 21       	and	r20, r5
+ 440:	94 2b       	or	r25, r20
+ 442:	a9 26       	eor	r10, r25
+ 444:	c9 26       	eor	r12, r25
+
+00000446 <CODE_BLOCK_START_5>:
+	solver_block	6, mask_6, digit_6, 2, CBM_2, 5, mask_5, digit_5, 2, CODE_BLOCK_START_6, LEGAL_DIGIT_LOOP_4, BACKTRACKING_TRANSITION_4
+ 446:	b5 fb       	bst	r27, 5
+ 448:	66 f0       	brts	.+24     	; 0x462 <end_frame_push5>
+ 44a:	6f 92       	push	r6
+ 44c:	5f 93       	push	r21
+ 44e:	90 85       	ldd	r25, Z+8	; 0x08
+ 450:	55 23       	and	r21, r21
+ 452:	11 f4       	brne	.+4      	; 0x458 <end_digit_is_zero5>
+ 454:	cf 7d       	andi	r28, 0xDF	; 223
+ 456:	03 c0       	rjmp	.+6      	; 0x45e <end_digit_is_other5>
+
+00000458 <end_digit_is_zero5>:
+ 458:	56 fd       	sbrc	r21, 6
+ 45a:	0a f0       	brmi	.+2      	; 0x45e <end_digit_is_other5>
+
+0000045c <end_digit_is_FF5>:
+ 45c:	95 27       	eor	r25, r21
+
+0000045e <end_digit_is_other5>:
+ 45e:	97 8b       	std	Z+23, r25	; 0x17
+ 460:	b0 62       	ori	r27, 0x20	; 32
+
+00000462 <end_frame_push5>:
+ 462:	5f ef       	ldi	r21, 0xFF	; 255
+ 464:	e5 fe       	sbrs	r14, 5
+ 466:	26 c0       	rjmp	.+76     	; 0x4b4 <CODE_BLOCK_START_6>
+ 468:	de 5f       	subi	r29, 0xFE	; 254
+ 46a:	67 88       	ldd	r6, Z+23	; 0x17
+ 46c:	6a 20       	and	r6, r10
+ 46e:	6c 20       	and	r6, r12
+ 470:	55 27       	eor	r21, r21
+ 472:	a5 fb       	bst	r26, 5
+ 474:	3e f4       	brtc	.+14     	; 0x484 <LEGAL_DIGIT_LOOP_5>
+ 476:	a2 fb       	bst	r26, 2
+ 478:	2e f4       	brtc	.+10     	; 0x484 <LEGAL_DIGIT_LOOP_5>
+ 47a:	c5 fb       	bst	r28, 5
+ 47c:	1e f4       	brtc	.+6      	; 0x484 <LEGAL_DIGIT_LOOP_5>
+ 47e:	ab 7d       	andi	r26, 0xDB	; 219
+ 480:	cf 7d       	andi	r28, 0xDF	; 223
+ 482:	18 c0       	rjmp	.+48     	; 0x4b4 <CODE_BLOCK_START_6>
+
+00000484 <LEGAL_DIGIT_LOOP_5>:
+ 484:	65 26       	eor	r6, r21
+ 486:	79 f4       	brne	.+30     	; 0x4a6 <end_mask_empty_check5>
+ 488:	a5 26       	eor	r10, r21
+ 48a:	c5 26       	eor	r12, r21
+ 48c:	d2 50       	subi	r29, 0x02	; 2
+
+0000048e <BACKTRACKING_TRANSITION_5>:
+ 48e:	b4 fb       	bst	r27, 4
+ 490:	1e f0       	brts	.+6      	; 0x498 <end_preceding_block_clue_check_5>
+ 492:	4f 91       	pop	r20
+ 494:	5f 90       	pop	r5
+ 496:	b0 61       	ori	r27, 0x10	; 16
+
+00000498 <end_preceding_block_clue_check_5>:
+ 498:	e4 fe       	sbrs	r14, 4
+ 49a:	c2 cf       	rjmp	.-124    	; 0x420 <BACKTRACKING_TRANSITION_4>
+ 49c:	44 23       	and	r20, r20
+ 49e:	11 f4       	brne	.+4      	; 0x4a4 <end_prec_digit_9_check5>
+ 4a0:	a4 62       	ori	r26, 0x24	; 36
+ 4a2:	c0 61       	ori	r28, 0x10	; 16
+
+000004a4 <end_prec_digit_9_check5>:
+ 4a4:	b8 cf       	rjmp	.-144    	; 0x416 <LEGAL_DIGIT_LOOP_4>
+
+000004a6 <end_mask_empty_check5>:
+ 4a6:	95 2f       	mov	r25, r21
+ 4a8:	56 2d       	mov	r21, r6
+ 4aa:	51 95       	neg	r21
+ 4ac:	56 21       	and	r21, r6
+ 4ae:	95 2b       	or	r25, r21
+ 4b0:	a9 26       	eor	r10, r25
+ 4b2:	c9 26       	eor	r12, r25
+
+000004b4 <CODE_BLOCK_START_6>:
+
+	solver_block	7, mask_7, digit_7, 3, CBM_3, 6, mask_6, digit_6, 2, CODE_BLOCK_START_7, LEGAL_DIGIT_LOOP_5, BACKTRACKING_TRANSITION_5
+ 4b4:	b6 fb       	bst	r27, 6
+ 4b6:	66 f0       	brts	.+24     	; 0x4d0 <end_frame_push6>
+ 4b8:	7f 92       	push	r7
+ 4ba:	6f 93       	push	r22
+ 4bc:	91 85       	ldd	r25, Z+9	; 0x09
+ 4be:	66 23       	and	r22, r22
+ 4c0:	11 f4       	brne	.+4      	; 0x4c6 <end_digit_is_zero6>
+ 4c2:	cf 7b       	andi	r28, 0xBF	; 191
+ 4c4:	03 c0       	rjmp	.+6      	; 0x4cc <end_digit_is_other6>
+
+000004c6 <end_digit_is_zero6>:
+ 4c6:	66 fd       	sbrc	r22, 6
+ 4c8:	0a f0       	brmi	.+2      	; 0x4cc <end_digit_is_other6>
+
+000004ca <end_digit_is_FF6>:
+ 4ca:	96 27       	eor	r25, r22
+
+000004cc <end_digit_is_other6>:
+ 4cc:	90 8f       	std	Z+24, r25	; 0x18
+ 4ce:	b0 64       	ori	r27, 0x40	; 64
+
+000004d0 <end_frame_push6>:
+ 4d0:	6f ef       	ldi	r22, 0xFF	; 255
+ 4d2:	e6 fe       	sbrs	r14, 6
+ 4d4:	26 c0       	rjmp	.+76     	; 0x522 <CODE_BLOCK_START_7>
+ 4d6:	de 5f       	subi	r29, 0xFE	; 254
+ 4d8:	70 8c       	ldd	r7, Z+24	; 0x18
+ 4da:	7a 20       	and	r7, r10
+ 4dc:	7d 20       	and	r7, r13
+ 4de:	66 27       	eor	r22, r22
+ 4e0:	a5 fb       	bst	r26, 5
+ 4e2:	3e f4       	brtc	.+14     	; 0x4f2 <LEGAL_DIGIT_LOOP_6>
+ 4e4:	a3 fb       	bst	r26, 3
+ 4e6:	2e f4       	brtc	.+10     	; 0x4f2 <LEGAL_DIGIT_LOOP_6>
+ 4e8:	c6 fb       	bst	r28, 6
+ 4ea:	1e f4       	brtc	.+6      	; 0x4f2 <LEGAL_DIGIT_LOOP_6>
+ 4ec:	a7 7d       	andi	r26, 0xD7	; 215
+ 4ee:	cf 7b       	andi	r28, 0xBF	; 191
+ 4f0:	18 c0       	rjmp	.+48     	; 0x522 <CODE_BLOCK_START_7>
+
+000004f2 <LEGAL_DIGIT_LOOP_6>:
+ 4f2:	76 26       	eor	r7, r22
+ 4f4:	79 f4       	brne	.+30     	; 0x514 <end_mask_empty_check6>
+ 4f6:	a6 26       	eor	r10, r22
+ 4f8:	d6 26       	eor	r13, r22
+ 4fa:	d2 50       	subi	r29, 0x02	; 2
+
+000004fc <BACKTRACKING_TRANSITION_6>:
+ 4fc:	b5 fb       	bst	r27, 5
+ 4fe:	1e f0       	brts	.+6      	; 0x506 <end_preceding_block_clue_check_6>
+ 500:	5f 91       	pop	r21
+ 502:	6f 90       	pop	r6
+ 504:	b0 62       	ori	r27, 0x20	; 32
+
+00000506 <end_preceding_block_clue_check_6>:
+ 506:	e5 fe       	sbrs	r14, 5
+ 508:	c2 cf       	rjmp	.-124    	; 0x48e <BACKTRACKING_TRANSITION_5>
+ 50a:	55 23       	and	r21, r21
+ 50c:	11 f4       	brne	.+4      	; 0x512 <end_prec_digit_9_check6>
+ 50e:	a4 62       	ori	r26, 0x24	; 36
+ 510:	c0 62       	ori	r28, 0x20	; 32
+
+00000512 <end_prec_digit_9_check6>:
+ 512:	b8 cf       	rjmp	.-144    	; 0x484 <LEGAL_DIGIT_LOOP_5>
+
+00000514 <end_mask_empty_check6>:
+ 514:	96 2f       	mov	r25, r22
+ 516:	67 2d       	mov	r22, r7
+ 518:	61 95       	neg	r22
+ 51a:	67 21       	and	r22, r7
+ 51c:	96 2b       	or	r25, r22
+ 51e:	a9 26       	eor	r10, r25
+ 520:	d9 26       	eor	r13, r25
+
+00000522 <CODE_BLOCK_START_7>:
+	solver_block	8, mask_8, digit_8, 3, CBM_3, 7, mask_7, digit_7, 3, CODE_BLOCK_START_8, LEGAL_DIGIT_LOOP_6, BACKTRACKING_TRANSITION_6
+ 522:	b7 fb       	bst	r27, 7
+ 524:	66 f0       	brts	.+24     	; 0x53e <end_frame_push7>
+ 526:	8f 92       	push	r8
+ 528:	7f 93       	push	r23
+ 52a:	92 85       	ldd	r25, Z+10	; 0x0a
+ 52c:	77 23       	and	r23, r23
+ 52e:	11 f4       	brne	.+4      	; 0x534 <end_digit_is_zero7>
+ 530:	cf 77       	andi	r28, 0x7F	; 127
+ 532:	03 c0       	rjmp	.+6      	; 0x53a <end_digit_is_other7>
+
+00000534 <end_digit_is_zero7>:
+ 534:	76 fd       	sbrc	r23, 6
+ 536:	0a f0       	brmi	.+2      	; 0x53a <end_digit_is_other7>
+
+00000538 <end_digit_is_FF7>:
+ 538:	97 27       	eor	r25, r23
+
+0000053a <end_digit_is_other7>:
+ 53a:	91 8f       	std	Z+25, r25	; 0x19
+ 53c:	b0 68       	ori	r27, 0x80	; 128
+
+0000053e <end_frame_push7>:
+ 53e:	7f ef       	ldi	r23, 0xFF	; 255
+ 540:	e7 fe       	sbrs	r14, 7
+ 542:	26 c0       	rjmp	.+76     	; 0x590 <CODE_BLOCK_START_8>
+ 544:	de 5f       	subi	r29, 0xFE	; 254
+ 546:	81 8c       	ldd	r8, Z+25	; 0x19
+ 548:	8a 20       	and	r8, r10
+ 54a:	8d 20       	and	r8, r13
+ 54c:	77 27       	eor	r23, r23
+ 54e:	a5 fb       	bst	r26, 5
+ 550:	3e f4       	brtc	.+14     	; 0x560 <LEGAL_DIGIT_LOOP_7>
+ 552:	a3 fb       	bst	r26, 3
+ 554:	2e f4       	brtc	.+10     	; 0x560 <LEGAL_DIGIT_LOOP_7>
+ 556:	c7 fb       	bst	r28, 7
+ 558:	1e f4       	brtc	.+6      	; 0x560 <LEGAL_DIGIT_LOOP_7>
+ 55a:	a7 7d       	andi	r26, 0xD7	; 215
+ 55c:	cf 77       	andi	r28, 0x7F	; 127
+ 55e:	18 c0       	rjmp	.+48     	; 0x590 <CODE_BLOCK_START_8>
+
+00000560 <LEGAL_DIGIT_LOOP_7>:
+ 560:	87 26       	eor	r8, r23
+ 562:	79 f4       	brne	.+30     	; 0x582 <end_mask_empty_check7>
+ 564:	a7 26       	eor	r10, r23
+ 566:	d7 26       	eor	r13, r23
+ 568:	d2 50       	subi	r29, 0x02	; 2
+
+0000056a <BACKTRACKING_TRANSITION_7>:
+ 56a:	b6 fb       	bst	r27, 6
+ 56c:	1e f0       	brts	.+6      	; 0x574 <end_preceding_block_clue_check_7>
+ 56e:	6f 91       	pop	r22
+ 570:	7f 90       	pop	r7
+ 572:	b0 64       	ori	r27, 0x40	; 64
+
+00000574 <end_preceding_block_clue_check_7>:
+ 574:	e6 fe       	sbrs	r14, 6
+ 576:	c2 cf       	rjmp	.-124    	; 0x4fc <BACKTRACKING_TRANSITION_6>
+ 578:	66 23       	and	r22, r22
+ 57a:	11 f4       	brne	.+4      	; 0x580 <end_prec_digit_9_check7>
+ 57c:	a8 62       	ori	r26, 0x28	; 40
+ 57e:	c0 64       	ori	r28, 0x40	; 64
+
+00000580 <end_prec_digit_9_check7>:
+ 580:	b8 cf       	rjmp	.-144    	; 0x4f2 <LEGAL_DIGIT_LOOP_6>
+
+00000582 <end_mask_empty_check7>:
+ 582:	97 2f       	mov	r25, r23
+ 584:	78 2d       	mov	r23, r8
+ 586:	71 95       	neg	r23
+ 588:	78 21       	and	r23, r8
+ 58a:	97 2b       	or	r25, r23
+ 58c:	a9 26       	eor	r10, r25
+ 58e:	d9 26       	eor	r13, r25
+
+00000590 <CODE_BLOCK_START_8>:
+	solver_block	9, mask_9, digit_9, 3, CBM_3, 8, mask_8, digit_8, 3, CODE_BLOCK_START_0, LEGAL_DIGIT_LOOP_7, BACKTRACKING_TRANSITION_7
+ 590:	a6 fb       	bst	r26, 6
+ 592:	66 f0       	brts	.+24     	; 0x5ac <end_frame_push8>
+ 594:	9f 92       	push	r9
+ 596:	8f 93       	push	r24
+ 598:	93 85       	ldd	r25, Z+11	; 0x0b
+ 59a:	88 23       	and	r24, r24
+ 59c:	11 f4       	brne	.+4      	; 0x5a2 <end_digit_is_zero8>
+ 59e:	df 7f       	andi	r29, 0xFF	; 255
+ 5a0:	03 c0       	rjmp	.+6      	; 0x5a8 <end_digit_is_other8>
+
+000005a2 <end_digit_is_zero8>:
+ 5a2:	86 fd       	sbrc	r24, 6
+ 5a4:	0a f0       	brmi	.+2      	; 0x5a8 <end_digit_is_other8>
+
+000005a6 <end_digit_is_FF8>:
+ 5a6:	98 27       	eor	r25, r24
+
+000005a8 <end_digit_is_other8>:
+ 5a8:	92 8f       	std	Z+26, r25	; 0x1a
+ 5aa:	a0 64       	ori	r26, 0x40	; 64
+
+000005ac <end_frame_push8>:
+ 5ac:	8f ef       	ldi	r24, 0xFF	; 255
+ 5ae:	a4 ff       	sbrs	r26, 4
+ 5b0:	11 ce       	rjmp	.-990    	; 0x1d4 <CODE_BLOCK_START_0>
+ 5b2:	de 5f       	subi	r29, 0xFE	; 254
+ 5b4:	92 8c       	ldd	r9, Z+26	; 0x1a
+ 5b6:	9a 20       	and	r9, r10
+ 5b8:	9d 20       	and	r9, r13
+ 5ba:	88 27       	eor	r24, r24
+ 5bc:	a5 fb       	bst	r26, 5
+ 5be:	3e f4       	brtc	.+14     	; 0x5ce <LEGAL_DIGIT_LOOP_8>
+ 5c0:	a3 fb       	bst	r26, 3
+ 5c2:	2e f4       	brtc	.+10     	; 0x5ce <LEGAL_DIGIT_LOOP_8>
+ 5c4:	d0 fb       	bst	r29, 0
+ 5c6:	1e f4       	brtc	.+6      	; 0x5ce <LEGAL_DIGIT_LOOP_8>
+ 5c8:	a7 7d       	andi	r26, 0xD7	; 215
+ 5ca:	df 7f       	andi	r29, 0xFF	; 255
+ 5cc:	03 ce       	rjmp	.-1018   	; 0x1d4 <CODE_BLOCK_START_0>
+
+000005ce <LEGAL_DIGIT_LOOP_8>:
+ 5ce:	98 26       	eor	r9, r24
+ 5d0:	79 f4       	brne	.+30     	; 0x5f0 <end_mask_empty_check8>
+ 5d2:	a8 26       	eor	r10, r24
+ 5d4:	d8 26       	eor	r13, r24
+ 5d6:	d2 50       	subi	r29, 0x02	; 2
+
+000005d8 <BACKTRACKING_TRANSITION_8>:
+ 5d8:	b7 fb       	bst	r27, 7
+ 5da:	1e f0       	brts	.+6      	; 0x5e2 <end_preceding_block_clue_check_8>
+ 5dc:	7f 91       	pop	r23
+ 5de:	8f 90       	pop	r8
+ 5e0:	b0 68       	ori	r27, 0x80	; 128
+
+000005e2 <end_preceding_block_clue_check_8>:
+ 5e2:	e7 fe       	sbrs	r14, 7
+ 5e4:	c2 cf       	rjmp	.-124    	; 0x56a <BACKTRACKING_TRANSITION_7>
+ 5e6:	77 23       	and	r23, r23
+ 5e8:	11 f4       	brne	.+4      	; 0x5ee <end_prec_digit_9_check8>
+ 5ea:	a8 62       	ori	r26, 0x28	; 40
+ 5ec:	c0 68       	ori	r28, 0x80	; 128
+
+000005ee <end_prec_digit_9_check8>:
+ 5ee:	b8 cf       	rjmp	.-144    	; 0x560 <LEGAL_DIGIT_LOOP_7>
+
+000005f0 <end_mask_empty_check8>:
+ 5f0:	98 2f       	mov	r25, r24
+ 5f2:	89 2d       	mov	r24, r9
+ 5f4:	81 95       	neg	r24
+ 5f6:	89 21       	and	r24, r9
+ 5f8:	98 2b       	or	r25, r24
+ 5fa:	a9 26       	eor	r10, r25
+ 5fc:	d9 26       	eor	r13, r25
+ 5fe:	ea cd       	rjmp	.-1068   	; 0x1d4 <CODE_BLOCK_START_0>
+	
+	; Fill progress bar (0x00 value since STK500 LEDs are in common anode configuration)
+	clr temp
+ 600:	99 27       	eor	r25, r25
+	out PORTC, temp
+ 602:	95 bb       	out	0x15, r25	; 21
+
+00000604 <ALGORITHM_END>:
+
+	ALGORITHM_END:
+
+	clr temp
+ 604:	99 27       	eor	r25, r25
+	out PORTC, temp
+ 606:	95 bb       	out	0x15, r25	; 21
+
+	; Clear the guard
+	clr temp
+ 608:	99 27       	eor	r25, r25
+	sts solver_guard, temp
+ 60a:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <solver_guard>
+
+	; Extract Sudoku cell data from the register file and the stack and store them to the sudoku_cells array (for the non-clue cells)
+	sbrc MDR, CRCE_9
+ 60e:	a4 fd       	sbrc	r26, 4
+	sts sudoku_cells+80, digit_9
+ 610:	80 93 b9 00 	sts	0x00B9, r24	; 0x8000b9 <sudoku_cells+0x50>
+	sbrc CRCE, (8-1)
+ 614:	e7 fc       	sbrc	r14, 7
+	sts sudoku_cells+79, digit_8
+ 616:	70 93 b8 00 	sts	0x00B8, r23	; 0x8000b8 <sudoku_cells+0x4f>
+	sbrc CRCE, (7-1)
+ 61a:	e6 fc       	sbrc	r14, 6
+	sts sudoku_cells+78, digit_7
+ 61c:	60 93 b7 00 	sts	0x00B7, r22	; 0x8000b7 <sudoku_cells+0x4e>
+	sbrc CRCE, (6-1)
+ 620:	e5 fc       	sbrc	r14, 5
+	sts sudoku_cells+77, digit_6
+ 622:	50 93 b6 00 	sts	0x00B6, r21	; 0x8000b6 <sudoku_cells+0x4d>
+	sbrc CRCE, (5-1)
+ 626:	e4 fc       	sbrc	r14, 4
+	sts sudoku_cells+76, digit_5
+ 628:	40 93 b5 00 	sts	0x00B5, r20	; 0x8000b5 <sudoku_cells+0x4c>
+	sbrc CRCE, (4-1)
+ 62c:	e3 fc       	sbrc	r14, 3
+	sts sudoku_cells+75, digit_4
+ 62e:	30 93 b4 00 	sts	0x00B4, r19	; 0x8000b4 <sudoku_cells+0x4b>
+	sbrc CRCE, (3-1)
+ 632:	e2 fc       	sbrc	r14, 2
+	sts sudoku_cells+74, digit_3
+ 634:	20 93 b3 00 	sts	0x00B3, r18	; 0x8000b3 <sudoku_cells+0x4a>
+	sbrc CRCE, (2-1)
+ 638:	e1 fc       	sbrc	r14, 1
+	sts sudoku_cells+73, digit_2
+ 63a:	10 93 b2 00 	sts	0x00B2, r17	; 0x8000b2 <sudoku_cells+0x49>
+	sbrc CRCE, (1-1)
+ 63e:	e0 fc       	sbrc	r14, 0
+	sts sudoku_cells+72, digit_1
+ 640:	00 93 b1 00 	sts	0x00B1, r16	; 0x8000b1 <sudoku_cells+0x48>
+	#define digit R19
+	#define bsel  R20
+	#define mask  R1
+
+	; Extract the remaining Sudoku cell data from the stack in reverse order and store only those whose cells do not contain clues
+	ldi ZH, hi8(sudoku_cells+81-9)
+ 644:	f0 e0       	ldi	r31, 0x00	; 0
+	ldi ZL, lo8(sudoku_cells+81-9)
+ 646:	e1 eb       	ldi	r30, 0xB1	; 177
+	ldi YH, hi8(solver_input+7*RS)
+ 648:	d1 e0       	ldi	r29, 0x01	; 1
+	ldi YL, lo8(solver_input+7*RS)
+ 64a:	c3 e2       	ldi	r28, 0x23	; 35
+
+	ldi outer, 8
+ 64c:	18 e0       	ldi	r17, 0x08	; 8
+
+0000064e <outer_loop_start>:
+	outer_loop_start:
+		; Fetch CRCE data from solver_input
+		ld CRCE, Y
+ 64e:	e8 80       	ld	r14, Y
+		ldd MDR, Y+1
+ 650:	a9 81       	ldd	r26, Y+1	; 0x01
+
+		; Pop CBID 9
+		sbiw Z, 1
+ 652:	31 97       	sbiw	r30, 0x01	; 1
+		pop digit
+ 654:	3f 91       	pop	r19
+		sbrc MDR, CRCE_9
+ 656:	a4 fd       	sbrc	r26, 4
+		st Z, digit
+ 658:	30 83       	st	Z, r19
+		pop mask
+ 65a:	1f 90       	pop	r1
+
+		; Pop CBID 8..1
+		ldi bsel, 0x80
+ 65c:	40 e8       	ldi	r20, 0x80	; 128
+
+0000065e <inner_loop_start>:
+		inner_loop_start:
+			sbiw Z, 1
+ 65e:	31 97       	sbiw	r30, 0x01	; 1
+			pop digit
+ 660:	3f 91       	pop	r19
+			mov temp, CRCE
+ 662:	9e 2d       	mov	r25, r14
+			and temp, bsel
+ 664:	94 23       	and	r25, r20
+			breq finished_with_store
+ 666:	09 f0       	breq	.+2      	; 0x66a <finished_with_store>
+			st Z, digit
+ 668:	30 83       	st	Z, r19
+
+0000066a <finished_with_store>:
+			finished_with_store:
+			pop mask
+ 66a:	1f 90       	pop	r1
+		lsr bsel
+ 66c:	46 95       	lsr	r20
+		brne inner_loop_start
+ 66e:	b9 f7       	brne	.-18     	; 0x65e <inner_loop_start>
+	sbiw Y, RS
+ 670:	2f 97       	sbiw	r28, 0x0f	; 15
+	dec outer
+ 672:	1a 95       	dec	r17
+	brne outer_loop_start
+ 674:	61 f7       	brne	.-40     	; 0x64e <outer_loop_start>
+
+	; Mixing Assembly and C conventions (restore registers)
+	pop R29
+ 676:	df 91       	pop	r29
+	pop R28
+ 678:	cf 91       	pop	r28
+	pop R17
+ 67a:	1f 91       	pop	r17
+	pop R16
+ 67c:	0f 91       	pop	r16
+	pop R15
+ 67e:	ff 90       	pop	r15
+	pop R14
+ 680:	ef 90       	pop	r14
+	pop R13
+ 682:	df 90       	pop	r13
+	pop R12
+ 684:	cf 90       	pop	r12
+	pop R11
+ 686:	bf 90       	pop	r11
+	pop R10
+ 688:	af 90       	pop	r10
+	pop R9
+ 68a:	9f 90       	pop	r9
+	pop R8
+ 68c:	8f 90       	pop	r8
+	pop R7
+ 68e:	7f 90       	pop	r7
+	pop R6
+ 690:	6f 90       	pop	r6
+	pop R5
+ 692:	5f 90       	pop	r5
+	pop R4
+ 694:	4f 90       	pop	r4
+	pop R3
+ 696:	3f 90       	pop	r3
+	pop R2
+ 698:	2f 90       	pop	r2
+	pop R0
+ 69a:	0f 90       	pop	r0
+
+	clr R1
+ 69c:	11 24       	eor	r1, r1
+
+ret
+ 69e:	08 95       	ret
+
+000006a0 <INT0_SOLVER_HOOK>:
+ *
+ *-----------------------------------------------------------------------*/
+
+INT0_SOLVER_HOOK:
+	; Store R16 and SREG directly to solver_image[16] and solver_image[32] respectively
+	sts solver_image+16, R16
+ 6a0:	00 93 53 01 	sts	0x0153, r16	; 0x800153 <solver_image+0x10>
+	in R16, SREG
+ 6a4:	0f b7       	in	r16, 0x3f	; 63
+	sts solver_image+32, R16
+ 6a6:	00 93 63 01 	sts	0x0163, r16	; 0x800163 <solver_image+0x20>
+
+	; In the ISR in C, a function call is performed to here, thus the stack contains the address of the ISR in C.
+	; We pop this address from the stack and discard it. The reti statement at the end will return to the return address of the C ISR.
+	; The top the stack will now contain the PC of the interrupted code.
+	pop R16
+ 6aa:	0f 91       	pop	r16
+	pop R16
+ 6ac:	0f 91       	pop	r16
+
+	; Check, through the solver_guard, that it was the solver's code that was interrupted (and not any other piece of code)
+	; Otherwise, clear the hook_action and return.
+	lds R16, solver_guard
+ 6ae:	00 91 61 00 	lds	r16, 0x0061	; 0x800061 <solver_guard>
+	sbrs R16, 0
+ 6b2:	00 ff       	sbrs	r16, 0
+	rjmp int0_solver_hook_end
+ 6b4:	62 c0       	rjmp	.+196    	; 0x77a <end_update_flag_actions>
+
+	lds R16, hook_action
+ 6b6:	00 91 60 00 	lds	r16, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+
+	; === Select appropriate actions ===
+	; Actions for BREAK flag
+	sbrs R16, BREAK_hook_flag
+ 6ba:	00 ff       	sbrs	r16, 0
+	rjmp end_break_flag_actions
+ 6bc:	4d c0       	rjmp	.+154    	; 0x758 <end_break_flag_actions>
+		; Set guard's PAUSED flag 
+		lds R16, solver_guard
+ 6be:	00 91 61 00 	lds	r16, 0x0061	; 0x800061 <solver_guard>
+		ori R16, 1 << 1
+ 6c2:	02 60       	ori	r16, 0x02	; 2
+		sts solver_guard, R16
+ 6c4:	00 93 61 00 	sts	0x0061, r16	; 0x800061 <solver_guard>
+
+		; Save the interrupted PC to solver_image
+		pop R16
+ 6c8:	0f 91       	pop	r16
+		sts solver_image+33, R16
+ 6ca:	00 93 64 01 	sts	0x0164, r16	; 0x800164 <solver_image+0x21>
+		pop R16
+ 6ce:	0f 91       	pop	r16
+		sts solver_image+34, R16
+ 6d0:	00 93 65 01 	sts	0x0165, r16	; 0x800165 <solver_image+0x22>
+
+		; Replace the interrupted PC with the exit label
+		ldi R16, pm_lo8(ALGORITHM_END)
+ 6d4:	02 e0       	ldi	r16, 0x02	; 2
+		push R16
+ 6d6:	0f 93       	push	r16
+		ldi R16, pm_hi8(ALGORITHM_END)
+ 6d8:	03 e0       	ldi	r16, 0x03	; 3
+		push R16
+ 6da:	0f 93       	push	r16
+		; Save entire register file to solver_image (except for R16, which has already been saved)
+		sts solver_image+0, R0
+ 6dc:	00 92 43 01 	sts	0x0143, r0	; 0x800143 <solver_image>
+		sts solver_image+1, R1
+ 6e0:	10 92 44 01 	sts	0x0144, r1	; 0x800144 <solver_image+0x1>
+		sts solver_image+2, R2
+ 6e4:	20 92 45 01 	sts	0x0145, r2	; 0x800145 <solver_image+0x2>
+		sts solver_image+3, R3
+ 6e8:	30 92 46 01 	sts	0x0146, r3	; 0x800146 <solver_image+0x3>
+		sts solver_image+4, R4
+ 6ec:	40 92 47 01 	sts	0x0147, r4	; 0x800147 <solver_image+0x4>
+		sts solver_image+5, R5
+ 6f0:	50 92 48 01 	sts	0x0148, r5	; 0x800148 <solver_image+0x5>
+		sts solver_image+6, R6
+ 6f4:	60 92 49 01 	sts	0x0149, r6	; 0x800149 <solver_image+0x6>
+		sts solver_image+7, R7
+ 6f8:	70 92 4a 01 	sts	0x014A, r7	; 0x80014a <solver_image+0x7>
+		sts solver_image+8, R8
+ 6fc:	80 92 4b 01 	sts	0x014B, r8	; 0x80014b <solver_image+0x8>
+		sts solver_image+9, R9
+ 700:	90 92 4c 01 	sts	0x014C, r9	; 0x80014c <solver_image+0x9>
+		sts solver_image+10, R10
+ 704:	a0 92 4d 01 	sts	0x014D, r10	; 0x80014d <solver_image+0xa>
+		sts solver_image+11, R11
+ 708:	b0 92 4e 01 	sts	0x014E, r11	; 0x80014e <solver_image+0xb>
+		sts solver_image+12, R12
+ 70c:	c0 92 4f 01 	sts	0x014F, r12	; 0x80014f <solver_image+0xc>
+		sts solver_image+13, R13
+ 710:	d0 92 50 01 	sts	0x0150, r13	; 0x800150 <solver_image+0xd>
+		sts solver_image+14, R14
+ 714:	e0 92 51 01 	sts	0x0151, r14	; 0x800151 <solver_image+0xe>
+		sts solver_image+15, R15
+ 718:	f0 92 52 01 	sts	0x0152, r15	; 0x800152 <solver_image+0xf>
+		sts solver_image+17, R17
+ 71c:	10 93 54 01 	sts	0x0154, r17	; 0x800154 <solver_image+0x11>
+		sts solver_image+18, R18
+ 720:	20 93 55 01 	sts	0x0155, r18	; 0x800155 <solver_image+0x12>
+		sts solver_image+19, R19
+ 724:	30 93 56 01 	sts	0x0156, r19	; 0x800156 <solver_image+0x13>
+		sts solver_image+20, R20
+ 728:	40 93 57 01 	sts	0x0157, r20	; 0x800157 <solver_image+0x14>
+		sts solver_image+21, R21
+ 72c:	50 93 58 01 	sts	0x0158, r21	; 0x800158 <solver_image+0x15>
+		sts solver_image+22, R22
+ 730:	60 93 59 01 	sts	0x0159, r22	; 0x800159 <solver_image+0x16>
+		sts solver_image+23, R23
+ 734:	70 93 5a 01 	sts	0x015A, r23	; 0x80015a <solver_image+0x17>
+		sts solver_image+24, R24
+ 738:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <solver_image+0x18>
+		sts solver_image+25, R25
+ 73c:	90 93 5c 01 	sts	0x015C, r25	; 0x80015c <solver_image+0x19>
+		sts solver_image+26, R26
+ 740:	a0 93 5d 01 	sts	0x015D, r26	; 0x80015d <solver_image+0x1a>
+		sts solver_image+27, R27
+ 744:	b0 93 5e 01 	sts	0x015E, r27	; 0x80015e <solver_image+0x1b>
+		sts solver_image+28, R28
+ 748:	c0 93 5f 01 	sts	0x015F, r28	; 0x80015f <solver_image+0x1c>
+		sts solver_image+29, R29
+ 74c:	d0 93 60 01 	sts	0x0160, r29	; 0x800160 <solver_image+0x1d>
+		sts solver_image+30, R30
+ 750:	e0 93 61 01 	sts	0x0161, r30	; 0x800161 <solver_image+0x1e>
+		sts solver_image+31, R31
+ 754:	f0 93 62 01 	sts	0x0162, r31	; 0x800162 <solver_image+0x1f>
+
+00000758 <end_break_flag_actions>:
+	end_break_flag_actions:
+
+	; Actions for UPDATE flag
+	lds R16, hook_action
+ 758:	00 91 60 00 	lds	r16, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+	bst R16, UPDATE_hook_flag
+ 75c:	01 fb       	bst	r16, 1
+	brtc end_update_flag_actions
+ 75e:	6e f4       	brtc	.+26     	; 0x77a <end_update_flag_actions>
+		push R17
+ 760:	1f 93       	push	r17
+
+		; Get the filled cells count (FCC bits7:1)
+		mov R16, FCC
+ 762:	0d 2f       	mov	r16, r29
+		lsr R16
+ 764:	06 95       	lsr	r16
+		; Initialize progress bar output
+		ldi R17, 0
+ 766:	10 e0       	ldi	r17, 0x00	; 0
+
+00000768 <bar_loop_start>:
+
+		; Construct the progress bar data iteratively
+		bar_loop_start:
+		cpi R16, 10
+ 768:	0a 30       	cpi	r16, 0x0A	; 10
+		brlt end_bar_loop
+ 76a:	24 f0       	brlt	.+8      	; 0x774 <end_bar_loop>
+			lsl R17
+ 76c:	11 0f       	add	r17, r17
+			ori R17, 1
+ 76e:	11 60       	ori	r17, 0x01	; 1
+		subi R16, 10
+ 770:	0a 50       	subi	r16, 0x0A	; 10
+		rjmp bar_loop_start
+ 772:	fa cf       	rjmp	.-12     	; 0x768 <bar_loop_start>
+
+00000774 <end_bar_loop>:
+		end_bar_loop:
+
+		; Output to PORT C
+		com R17
+ 774:	10 95       	com	r17
+		out PORTC, R17
+ 776:	15 bb       	out	0x15, r17	; 21
+		
+		pop R17
+ 778:	1f 91       	pop	r17
+
+0000077a <end_update_flag_actions>:
+	
+
+	int0_solver_hook_end:
+
+	; Clear interrupt trigger so the hook does not keep firing constantly
+	sbi INT0_PORT, INT0_BIT
+ 77a:	92 9a       	sbi	0x12, 2	; 18
+
+	; Clear hook_action variable
+	clr R16
+ 77c:	00 27       	eor	r16, r16
+	sts hook_action, R16
+ 77e:	00 93 60 00 	sts	0x0060, r16	; 0x800060 <__DATA_REGION_ORIGIN__>
+
+	; Restore SREG and R16
+	lds R16, solver_image+32
+ 782:	00 91 63 01 	lds	r16, 0x0163	; 0x800163 <solver_image+0x20>
+	out SREG, R16
+ 786:	0f bf       	out	0x3f, r16	; 63
+
+	; Restore R16
+	lds R16, solver_image+16
+ 788:	00 91 53 01 	lds	r16, 0x0153	; 0x800153 <solver_image+0x10>
+ 78c:	18 95       	reti
+
+0000078e <INT0_init>:
+ *	- Reference: ATmega16 manual (pdf) p.68
+ *
+ *-----------------------------------------------------------------------*/
+void INT0_init(){
+	// Configure INT0 pin as output
+	INT0_DDR |= 1 << INT0_BIT;
+ 78e:	81 b3       	in	r24, 0x11	; 17
+ 790:	84 60       	ori	r24, 0x04	; 4
+ 792:	81 bb       	out	0x11, r24	; 17
+	
+	// Set INT0 pin high (to avoid firing the interrupt while setting it up)
+	INT0_PORT |= 1 << INT0_BIT;
+ 794:	82 b3       	in	r24, 0x12	; 18
+ 796:	84 60       	ori	r24, 0x04	; 4
+ 798:	82 bb       	out	0x12, r24	; 18
+	
+	// Configure interrupt 0 sense control to fire on the pin's low level (ISC01, ISC00 set to 00)
+	MCUCR &= ~((1 << ISC01) | (1 << ISC00));
+ 79a:	85 b7       	in	r24, 0x35	; 53
+ 79c:	8c 7f       	andi	r24, 0xFC	; 252
+ 79e:	85 bf       	out	0x35, r24	; 53
+	
+	// Enable external interrupt request 0
+	GICR |= 1 << INT0;
+ 7a0:	8b b7       	in	r24, 0x3b	; 59
+ 7a2:	80 64       	ori	r24, 0x40	; 64
+ 7a4:	8b bf       	out	0x3b, r24	; 59
+ 7a6:	08 95       	ret
+
+000007a8 <TIMER1_init>:
+ *	- Reference: ATmega16 manual (pdf) p.100
+ *			 
+ *-----------------------------------------------------------------------*/
+void TIMER1_init(uint16_t timer1_target_value){
+	// Set the timer 1 CTC mode (clear timer on compare) and prescaler to 8
+	TCCR1A = (0 << WGM11) | (0 << WGM10);
+ 7a8:	1f bc       	out	0x2f, r1	; 47
+	TCCR1B = (0 << WGM13) | (1 << WGM12) | (0 << CS12) | (1 << CS11) | (0 << CS10);
+ 7aa:	2a e0       	ldi	r18, 0x0A	; 10
+ 7ac:	2e bd       	out	0x2e, r18	; 46
+
+	// Set Output Compare Register 1 to timer 1's target value (as per the datasheet, we write the "HI8" byte first)
+	OCR1AH = (uint8_t)(timer1_target_value >> 8);
+ 7ae:	9b bd       	out	0x2b, r25	; 43
+	OCR1AL = (uint8_t) timer1_target_value;
+ 7b0:	8a bd       	out	0x2a, r24	; 42
+
+	// Intitialize timer 1's counter to 0
+	TCNT1H = 0;
+ 7b2:	1d bc       	out	0x2d, r1	; 45
+	TCNT1L = 0;
+ 7b4:	1c bc       	out	0x2c, r1	; 44
+
+	// Enable timer 1's Output Compare A Match Interrupt
+	TIMSK = (1 << OCIE1A);
+ 7b6:	80 e1       	ldi	r24, 0x10	; 16
+ 7b8:	89 bf       	out	0x39, r24	; 57
+ 7ba:	08 95       	ret
+
+000007bc <USART_init>:
+ *	- Reference: ATmega16 manual (pdf) p.150
+ *			 
+ *-----------------------------------------------------------------------*/
+void USART_init(uint16_t ubrr_value){
+	/* Set baud rate */
+	UBRRH = (uint8_t)(ubrr_value >> 8);
+ 7bc:	90 bd       	out	0x20, r25	; 32
+	UBRRL = (uint8_t) ubrr_value;
+ 7be:	89 b9       	out	0x09, r24	; 9
+	
+	/* Enable receiver and transmitter */
+	/* Writing RXCIE bit to one enables interrupt on the RXC Flag. */
+	UCSRB = (1 << RXCIE) | (1 << RXEN) | (1 << TXEN);
+ 7c0:	88 e9       	ldi	r24, 0x98	; 152
+ 7c2:	8a b9       	out	0x0a, r24	; 10
+	
+	/* Set frame format: 8data, 1stop bit */
+	/* The URSEL must be one when writing the UCSRC. */
+	UCSRC = (1 << URSEL) | (1 << UCSZ1) | (1 << UCSZ0);
+ 7c4:	86 e8       	ldi	r24, 0x86	; 134
+ 7c6:	80 bd       	out	0x20, r24	; 32
+ 7c8:	08 95       	ret
+
+000007ca <__vector_1>:
+ *	EXTERNAL INTERRUPT 0 - SOFTWARE INTERRUPT - SOLVER HOOK
+ *	Is created with the attribute IS_NAKED, so the compiler does not include a prologue and epilogue
+ *			 
+ *-----------------------------------------------------------------------*/
+ISR(INT0_vect, ISR_NAKED){
+	INT0_SOLVER_HOOK();
+ 7ca:	0e 94 50 03 	call	0x6a0	; 0x6a0 <INT0_SOLVER_HOOK>
+
+000007ce <__vector_6>:
+ *	TIMER 1 ISR
+ *	Fires with a rate of 40 Hz.
+ *	Interrupt for triggering solver's hook to get the number of filled cells and output it to the progress bar
+ *			 
+ *-----------------------------------------------------------------------*/
+ISR(TIMER1_COMPA_vect){
+ 7ce:	1f 92       	push	r1
+ 7d0:	0f 92       	push	r0
+ 7d2:	0f b6       	in	r0, 0x3f	; 63
+ 7d4:	0f 92       	push	r0
+ 7d6:	11 24       	eor	r1, r1
+ 7d8:	8f 93       	push	r24
+	// Enable update hook action
+	hook_action |= 1 << 1;
+ 7da:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 7de:	82 60       	ori	r24, 0x02	; 2
+ 7e0:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+	
+	// Set INT0 pin low to trigger the software interrupt/hook (once this one finishes)
+	INT0_PORT &= ~( 1 << INT0_BIT );
+ 7e4:	82 b3       	in	r24, 0x12	; 18
+ 7e6:	8b 7f       	andi	r24, 0xFB	; 251
+ 7e8:	82 bb       	out	0x12, r24	; 18
+}
+ 7ea:	8f 91       	pop	r24
+ 7ec:	0f 90       	pop	r0
+ 7ee:	0f be       	out	0x3f, r0	; 63
+ 7f0:	0f 90       	pop	r0
+ 7f2:	1f 90       	pop	r1
+ 7f4:	18 95       	reti
+
+000007f6 <__vector_11>:
+ *	 are unread data present in the receive buffer.
+ *	 This flag is one when unread data exist in the 
+ *	 receive buffer, and zero when the receive buffer is empty.
+ *
+ *----------------------------------------------------------------*/
+ISR(USART_RXC_vect){
+ 7f6:	1f 92       	push	r1
+ 7f8:	0f 92       	push	r0
+ 7fa:	0f b6       	in	r0, 0x3f	; 63
+ 7fc:	0f 92       	push	r0
+ 7fe:	11 24       	eor	r1, r1
+ 800:	2f 93       	push	r18
+ 802:	3f 93       	push	r19
+ 804:	4f 93       	push	r20
+ 806:	5f 93       	push	r21
+ 808:	8f 93       	push	r24
+ 80a:	9f 93       	push	r25
+ 80c:	ef 93       	push	r30
+ 80e:	ff 93       	push	r31
+	// Process received data from buffer.
+	// USART Receive Complete (RXC) flag bit is set when there are unread data 
+	// in the receive buffer and cleared when the receive buffer is empty.
+	
+	#ifndef SIMULATION
+		uint8_t received =  UDR;
+ 810:	8c b1       	in	r24, 0x0c	; 12
+		received = TCNT2;
+	#endif
+	
+	
+	// Finalize commands (handle <CR> and <LF>)
+	if (received == 0x0D || received == 0x0A){
+ 812:	8d 30       	cpi	r24, 0x0D	; 13
+ 814:	11 f0       	breq	.+4      	; 0x81a <__vector_11+0x24>
+ 816:	8a 30       	cpi	r24, 0x0A	; 10
+ 818:	41 f5       	brne	.+80     	; 0x86a <__vector_11+0x74>
+		// accept <CR> if it's the first control character
+		if (received == 0x0D && (cmd & CRLF_flags) == 0 && cmd != NONE && cmd != INVALID){
+ 81a:	8d 30       	cpi	r24, 0x0D	; 13
+ 81c:	69 f4       	brne	.+26     	; 0x838 <__vector_11+0x42>
+ 81e:	90 91 66 01 	lds	r25, 0x0166	; 0x800166 <cmd>
+ 822:	29 2f       	mov	r18, r25
+ 824:	20 7c       	andi	r18, 0xC0	; 192
+ 826:	41 f4       	brne	.+16     	; 0x838 <__vector_11+0x42>
+ 828:	99 23       	and	r25, r25
+ 82a:	31 f0       	breq	.+12     	; 0x838 <__vector_11+0x42>
+ 82c:	9c 33       	cpi	r25, 0x3C	; 60
+ 82e:	21 f0       	breq	.+8      	; 0x838 <__vector_11+0x42>
+			cmd = cmd | CR_flag;
+ 830:	90 64       	ori	r25, 0x40	; 64
+ 832:	90 93 66 01 	sts	0x0166, r25	; 0x800166 <cmd>
+ 836:	9a c0       	rjmp	.+308    	; 0x96c <__vector_11+0x176>
+		}
+		// accept <LF> if it immediately follows <CR>
+		else if (received == 0x0A && (cmd & CRLF_flags) == CR_flag && cmd != NONE && cmd != INVALID){
+ 838:	8a 30       	cpi	r24, 0x0A	; 10
+ 83a:	71 f4       	brne	.+28     	; 0x858 <__vector_11+0x62>
+ 83c:	90 91 66 01 	lds	r25, 0x0166	; 0x800166 <cmd>
+ 840:	29 2f       	mov	r18, r25
+ 842:	20 7c       	andi	r18, 0xC0	; 192
+ 844:	20 34       	cpi	r18, 0x40	; 64
+ 846:	41 f4       	brne	.+16     	; 0x858 <__vector_11+0x62>
+ 848:	99 23       	and	r25, r25
+ 84a:	31 f0       	breq	.+12     	; 0x858 <__vector_11+0x62>
+ 84c:	9c 33       	cpi	r25, 0x3C	; 60
+ 84e:	21 f0       	breq	.+8      	; 0x858 <__vector_11+0x62>
+			cmd = cmd | LF_flag;
+ 850:	90 68       	ori	r25, 0x80	; 128
+ 852:	90 93 66 01 	sts	0x0166, r25	; 0x800166 <cmd>
+ 856:	8a c0       	rjmp	.+276    	; 0x96c <__vector_11+0x176>
+		}
+		// when an erroneous <LF> is received, reset the command
+		else if (received == 0x0A){
+ 858:	8a 30       	cpi	r24, 0x0A	; 10
+ 85a:	19 f4       	brne	.+6      	; 0x862 <__vector_11+0x6c>
+			cmd = NONE;
+ 85c:	10 92 66 01 	sts	0x0166, r1	; 0x800166 <cmd>
+ 860:	85 c0       	rjmp	.+266    	; 0x96c <__vector_11+0x176>
+		}
+		// anything else (combination or character) is invalid (need to consume characters until a <LF> is received)
+		else {
+			cmd = INVALID;
+ 862:	8c e3       	ldi	r24, 0x3C	; 60
+ 864:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 868:	81 c0       	rjmp	.+258    	; 0x96c <__vector_11+0x176>
+		}
+	}
+	// Initialize commands based on their first character
+	else if (cmd == NONE){
+ 86a:	90 91 66 01 	lds	r25, 0x0166	; 0x800166 <cmd>
+ 86e:	91 11       	cpse	r25, r1
+ 870:	3a c0       	rjmp	.+116    	; 0x8e6 <__vector_11+0xf0>
+		if (received == 'A'){
+ 872:	81 34       	cpi	r24, 0x41	; 65
+ 874:	21 f4       	brne	.+8      	; 0x87e <__vector_11+0x88>
+			cmd = INIT_CMD(CC_AT);
+ 876:	84 e0       	ldi	r24, 0x04	; 4
+ 878:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 87c:	77 c0       	rjmp	.+238    	; 0x96c <__vector_11+0x176>
+		}
+		else if (received == 'C'){
+ 87e:	83 34       	cpi	r24, 0x43	; 67
+ 880:	21 f4       	brne	.+8      	; 0x88a <__vector_11+0x94>
+			cmd = INIT_CMD(CC_C);
+ 882:	88 e0       	ldi	r24, 0x08	; 8
+ 884:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 888:	71 c0       	rjmp	.+226    	; 0x96c <__vector_11+0x176>
+		}
+		else if (received == 'N'){
+ 88a:	8e 34       	cpi	r24, 0x4E	; 78
+ 88c:	21 f4       	brne	.+8      	; 0x896 <__vector_11+0xa0>
+			cmd = INIT_CMD(CC_N);
+ 88e:	8c e0       	ldi	r24, 0x0C	; 12
+ 890:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 894:	6b c0       	rjmp	.+214    	; 0x96c <__vector_11+0x176>
+		}
+		else if (received == 'P'){
+ 896:	80 35       	cpi	r24, 0x50	; 80
+ 898:	21 f4       	brne	.+8      	; 0x8a2 <__vector_11+0xac>
+			cmd = INIT_CMD(CC_P);
+ 89a:	80 e1       	ldi	r24, 0x10	; 16
+ 89c:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 8a0:	65 c0       	rjmp	.+202    	; 0x96c <__vector_11+0x176>
+		}
+		else if (received == 'S'){
+ 8a2:	83 35       	cpi	r24, 0x53	; 83
+ 8a4:	21 f4       	brne	.+8      	; 0x8ae <__vector_11+0xb8>
+			cmd = INIT_CMD(CC_S);
+ 8a6:	84 e1       	ldi	r24, 0x14	; 20
+ 8a8:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 8ac:	5f c0       	rjmp	.+190    	; 0x96c <__vector_11+0x176>
+		}
+		else if (received == 'T'){
+ 8ae:	84 35       	cpi	r24, 0x54	; 84
+ 8b0:	21 f4       	brne	.+8      	; 0x8ba <__vector_11+0xc4>
+			cmd = INIT_CMD(CC_T);
+ 8b2:	88 e1       	ldi	r24, 0x18	; 24
+ 8b4:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 8b8:	59 c0       	rjmp	.+178    	; 0x96c <__vector_11+0x176>
+		}
+		else if (received == 'O'){
+ 8ba:	8f 34       	cpi	r24, 0x4F	; 79
+ 8bc:	21 f4       	brne	.+8      	; 0x8c6 <__vector_11+0xd0>
+			cmd = INIT_CMD(CC_OK);
+ 8be:	8c e1       	ldi	r24, 0x1C	; 28
+ 8c0:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 8c4:	53 c0       	rjmp	.+166    	; 0x96c <__vector_11+0x176>
+		}
+		else if (received == 'B'){
+ 8c6:	82 34       	cpi	r24, 0x42	; 66
+ 8c8:	21 f4       	brne	.+8      	; 0x8d2 <__vector_11+0xdc>
+			cmd = INIT_CMD(CC_B);
+ 8ca:	80 e2       	ldi	r24, 0x20	; 32
+ 8cc:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 8d0:	4d c0       	rjmp	.+154    	; 0x96c <__vector_11+0x176>
+		}
+		else if (received == 'D'){
+ 8d2:	84 34       	cpi	r24, 0x44	; 68
+ 8d4:	21 f4       	brne	.+8      	; 0x8de <__vector_11+0xe8>
+			cmd = INIT_CMD(CC_D);
+ 8d6:	84 e2       	ldi	r24, 0x24	; 36
+ 8d8:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 8dc:	47 c0       	rjmp	.+142    	; 0x96c <__vector_11+0x176>
+		}
+		else {
+			cmd = INVALID;
+ 8de:	8c e3       	ldi	r24, 0x3C	; 60
+ 8e0:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 8e4:	43 c0       	rjmp	.+134    	; 0x96c <__vector_11+0x176>
+		}
+	}
+	// Continue commands with more than one base characters, if no control character (i.e. CR or LF) has been received
+	else if (cmd != INVALID && (cmd & CRLF_flags) == 0){
+ 8e6:	9c 33       	cpi	r25, 0x3C	; 60
+ 8e8:	09 f4       	brne	.+2      	; 0x8ec <__vector_11+0xf6>
+ 8ea:	40 c0       	rjmp	.+128    	; 0x96c <__vector_11+0x176>
+ 8ec:	29 2f       	mov	r18, r25
+ 8ee:	20 7c       	andi	r18, 0xC0	; 192
+ 8f0:	e9 f5       	brne	.+122    	; 0x96c <__vector_11+0x176>
+		// Check that the command length is within bounds
+		if (CMD_BASE_LEN(cmd) < 4){
+ 8f2:	29 2f       	mov	r18, r25
+ 8f4:	23 70       	andi	r18, 0x03	; 3
+ 8f6:	30 e0       	ldi	r19, 0x00	; 0
+ 8f8:	a9 01       	movw	r20, r18
+ 8fa:	4f 5f       	subi	r20, 0xFF	; 255
+ 8fc:	5f 4f       	sbci	r21, 0xFF	; 255
+ 8fe:	44 30       	cpi	r20, 0x04	; 4
+ 900:	51 05       	cpc	r21, r1
+ 902:	8c f5       	brge	.+98     	; 0x966 <__vector_11+0x170>
+			// Continue AT command
+			if (received == 'T' && IS_CMD(cmd, CC_AT)){
+ 904:	84 35       	cpi	r24, 0x54	; 84
+ 906:	51 f4       	brne	.+20     	; 0x91c <__vector_11+0x126>
+ 908:	49 2f       	mov	r20, r25
+ 90a:	46 95       	lsr	r20
+ 90c:	46 95       	lsr	r20
+ 90e:	4f 70       	andi	r20, 0x0F	; 15
+ 910:	41 30       	cpi	r20, 0x01	; 1
+ 912:	21 f4       	brne	.+8      	; 0x91c <__vector_11+0x126>
+				// increment command's base length (guaranteed to increment only lower 2 bits)
+				cmd++;
+ 914:	9f 5f       	subi	r25, 0xFF	; 255
+ 916:	90 93 66 01 	sts	0x0166, r25	; 0x800166 <cmd>
+ 91a:	28 c0       	rjmp	.+80     	; 0x96c <__vector_11+0x176>
+			}
+			// Continue OK command
+			else if (received == 'K' && IS_CMD(cmd, CC_OK)){
+ 91c:	8b 34       	cpi	r24, 0x4B	; 75
+ 91e:	51 f4       	brne	.+20     	; 0x934 <__vector_11+0x13e>
+ 920:	49 2f       	mov	r20, r25
+ 922:	46 95       	lsr	r20
+ 924:	46 95       	lsr	r20
+ 926:	4f 70       	andi	r20, 0x0F	; 15
+ 928:	47 30       	cpi	r20, 0x07	; 7
+ 92a:	21 f4       	brne	.+8      	; 0x934 <__vector_11+0x13e>
+				// increment command's base length (guaranteed to increment only lower 2 bits)
+				cmd++;
+ 92c:	9f 5f       	subi	r25, 0xFF	; 255
+ 92e:	90 93 66 01 	sts	0x0166, r25	; 0x800166 <cmd>
+ 932:	1c c0       	rjmp	.+56     	; 0x96c <__vector_11+0x176>
+			}
+			// Continue N<X><Y><VAL> or D<X><Y> command
+			else if (received >= '1' && received <= '9' && (IS_CMD(cmd, CC_N) || IS_CMD(cmd, CC_D))){
+ 934:	4f ec       	ldi	r20, 0xCF	; 207
+ 936:	48 0f       	add	r20, r24
+ 938:	49 30       	cpi	r20, 0x09	; 9
+ 93a:	88 f4       	brcc	.+34     	; 0x95e <__vector_11+0x168>
+ 93c:	49 2f       	mov	r20, r25
+ 93e:	46 95       	lsr	r20
+ 940:	46 95       	lsr	r20
+ 942:	4f 70       	andi	r20, 0x0F	; 15
+ 944:	43 30       	cpi	r20, 0x03	; 3
+ 946:	11 f0       	breq	.+4      	; 0x94c <__vector_11+0x156>
+ 948:	49 30       	cpi	r20, 0x09	; 9
+ 94a:	49 f4       	brne	.+18     	; 0x95e <__vector_11+0x168>
+				// convert ASCII digit to integer and "append" it to the command
+				cmd_digits[CMD_BASE_LEN(cmd) - 1] = received - '0';
+ 94c:	f9 01       	movw	r30, r18
+ 94e:	ee 59       	subi	r30, 0x9E	; 158
+ 950:	ff 4f       	sbci	r31, 0xFF	; 255
+ 952:	80 53       	subi	r24, 0x30	; 48
+ 954:	80 83       	st	Z, r24
+				
+				// increment command's base length (guaranteed to increment only lower 2 bits)
+				cmd++;
+ 956:	9f 5f       	subi	r25, 0xFF	; 255
+ 958:	90 93 66 01 	sts	0x0166, r25	; 0x800166 <cmd>
+ 95c:	07 c0       	rjmp	.+14     	; 0x96c <__vector_11+0x176>
+			}
+			// Any other combination yields an invalid command
+			else {
+				cmd = INVALID;
+ 95e:	8c e3       	ldi	r24, 0x3C	; 60
+ 960:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+ 964:	03 c0       	rjmp	.+6      	; 0x96c <__vector_11+0x176>
+			}
+		}
+		// Adding another character to the command would exceed it's length bounds, so the command is invalid
+		else {
+			cmd = INVALID;
+ 966:	8c e3       	ldi	r24, 0x3C	; 60
+ 968:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <cmd>
+		}
+	}
+	
+	// If a command has finished, trigger the software interrupt to preempt the solver
+	if ((cmd & CRLF_flags) == CRLF_flags){
+ 96c:	80 91 66 01 	lds	r24, 0x0166	; 0x800166 <cmd>
+ 970:	98 2f       	mov	r25, r24
+ 972:	90 7c       	andi	r25, 0xC0	; 192
+ 974:	90 3c       	cpi	r25, 0xC0	; 192
+ 976:	61 f4       	brne	.+24     	; 0x990 <__vector_11+0x19a>
+		// If a debugging command has been received, set the break flag in hook_action
+		if (cmd == B_CR_LF || cmd == D_X_Y_CR_LF){
+ 978:	80 3e       	cpi	r24, 0xE0	; 224
+ 97a:	11 f0       	breq	.+4      	; 0x980 <__vector_11+0x18a>
+ 97c:	86 3e       	cpi	r24, 0xE6	; 230
+ 97e:	29 f4       	brne	.+10     	; 0x98a <__vector_11+0x194>
+			hook_action |= 1;
+ 980:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 984:	81 60       	ori	r24, 0x01	; 1
+ 986:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+		}
+		
+		// Set INT0 pin low to trigger the software interrupt/hook (once this one finishes)
+		INT0_PORT &= ~( 1 << INT0_BIT );
+ 98a:	82 b3       	in	r24, 0x12	; 18
+ 98c:	8b 7f       	andi	r24, 0xFB	; 251
+ 98e:	82 bb       	out	0x12, r24	; 18
+	}
+	
+	return;
+}
+ 990:	ff 91       	pop	r31
+ 992:	ef 91       	pop	r30
+ 994:	9f 91       	pop	r25
+ 996:	8f 91       	pop	r24
+ 998:	5f 91       	pop	r21
+ 99a:	4f 91       	pop	r20
+ 99c:	3f 91       	pop	r19
+ 99e:	2f 91       	pop	r18
+ 9a0:	0f 90       	pop	r0
+ 9a2:	0f be       	out	0x3f, r0	; 63
+ 9a4:	0f 90       	pop	r0
+ 9a6:	1f 90       	pop	r1
+ 9a8:	18 95       	reti
+
+000009aa <sudoku_clear>:
+ *	Clear Sudoku data. 
+ *	Initializes all cells with 0 and sets the filled cells number to 0.
+ *
+ *----------------------------------------------------*/
+void sudoku_clear(){
+	for (uint8_t i=0; i<81; i++){
+ 9aa:	80 e0       	ldi	r24, 0x00	; 0
+ 9ac:	07 c0       	rjmp	.+14     	; 0x9bc <sudoku_clear+0x12>
+		sudoku_cells[i] = 0x0F;
+ 9ae:	e8 2f       	mov	r30, r24
+ 9b0:	f0 e0       	ldi	r31, 0x00	; 0
+ 9b2:	e7 59       	subi	r30, 0x97	; 151
+ 9b4:	ff 4f       	sbci	r31, 0xFF	; 255
+ 9b6:	9f e0       	ldi	r25, 0x0F	; 15
+ 9b8:	90 83       	st	Z, r25
+ *	Clear Sudoku data. 
+ *	Initializes all cells with 0 and sets the filled cells number to 0.
+ *
+ *----------------------------------------------------*/
+void sudoku_clear(){
+	for (uint8_t i=0; i<81; i++){
+ 9ba:	8f 5f       	subi	r24, 0xFF	; 255
+ 9bc:	81 35       	cpi	r24, 0x51	; 81
+ 9be:	b8 f3       	brcs	.-18     	; 0x9ae <sudoku_clear+0x4>
+ 9c0:	80 e0       	ldi	r24, 0x00	; 0
+ 9c2:	06 c0       	rjmp	.+12     	; 0x9d0 <sudoku_clear+0x26>
+		sudoku_cells[i] = 0x0F;
+	}
+	
+	// Initialize solver_input data
+	for (uint8_t i=0; i<9*SOLVER_INPUT_ROW_SIZE + 2; i++){
+		solver_input[i] = 0;
+ 9c4:	e8 2f       	mov	r30, r24
+ 9c6:	f0 e0       	ldi	r31, 0x00	; 0
+ 9c8:	e6 54       	subi	r30, 0x46	; 70
+ 9ca:	ff 4f       	sbci	r31, 0xFF	; 255
+ 9cc:	10 82       	st	Z, r1
+	for (uint8_t i=0; i<81; i++){
+		sudoku_cells[i] = 0x0F;
+	}
+	
+	// Initialize solver_input data
+	for (uint8_t i=0; i<9*SOLVER_INPUT_ROW_SIZE + 2; i++){
+ 9ce:	8f 5f       	subi	r24, 0xFF	; 255
+ 9d0:	89 38       	cpi	r24, 0x89	; 137
+ 9d2:	c0 f3       	brcs	.-16     	; 0x9c4 <sudoku_clear+0x1a>
+ 9d4:	31 e0       	ldi	r19, 0x01	; 1
+ 9d6:	25 c0       	rjmp	.+74     	; 0xa22 <sudoku_clear+0x78>
+		solver_input[i] = 0;
+	}
+	
+	// Set all legal digit masks to 1s and all cell empty flags to 1s
+	for (uint8_t row=1; row<=9; row++){
+		si_CRCE(row) = 0xFF;
+ 9d8:	43 2f       	mov	r20, r19
+ 9da:	50 e0       	ldi	r21, 0x00	; 0
+ 9dc:	41 50       	subi	r20, 0x01	; 1
+ 9de:	51 09       	sbc	r21, r1
+ 9e0:	2f e0       	ldi	r18, 0x0F	; 15
+ 9e2:	24 9f       	mul	r18, r20
+ 9e4:	c0 01       	movw	r24, r0
+ 9e6:	25 9f       	mul	r18, r21
+ 9e8:	90 0d       	add	r25, r0
+ 9ea:	11 24       	eor	r1, r1
+ 9ec:	fc 01       	movw	r30, r24
+ 9ee:	e6 54       	subi	r30, 0x46	; 70
+ 9f0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 9f2:	2f ef       	ldi	r18, 0xFF	; 255
+ 9f4:	20 83       	st	Z, r18
+		si_MDR(row) = 0x3E;
+ 9f6:	fc 01       	movw	r30, r24
+ 9f8:	e5 54       	subi	r30, 0x45	; 69
+ 9fa:	ff 4f       	sbci	r31, 0xFF	; 255
+ 9fc:	4e e3       	ldi	r20, 0x3E	; 62
+ 9fe:	40 83       	st	Z, r20
+		si_CRM(row) = 0xFF;
+ a00:	fc 01       	movw	r30, r24
+ a02:	e4 54       	subi	r30, 0x44	; 68
+ a04:	ff 4f       	sbci	r31, 0xFF	; 255
+ a06:	20 83       	st	Z, r18
+		si_CBM_i(row, 1) = 0xFF;
+ a08:	fc 01       	movw	r30, r24
+ a0a:	ea 53       	subi	r30, 0x3A	; 58
+ a0c:	ff 4f       	sbci	r31, 0xFF	; 255
+ a0e:	20 83       	st	Z, r18
+		si_CBM_i(row, 4) = 0xFF;
+ a10:	fc 01       	movw	r30, r24
+ a12:	e9 53       	subi	r30, 0x39	; 57
+ a14:	ff 4f       	sbci	r31, 0xFF	; 255
+ a16:	20 83       	st	Z, r18
+		si_CBM_i(row, 7) = 0xFF;
+ a18:	fc 01       	movw	r30, r24
+ a1a:	e8 53       	subi	r30, 0x38	; 56
+ a1c:	ff 4f       	sbci	r31, 0xFF	; 255
+ a1e:	20 83       	st	Z, r18
+	for (uint8_t i=0; i<9*SOLVER_INPUT_ROW_SIZE + 2; i++){
+		solver_input[i] = 0;
+	}
+	
+	// Set all legal digit masks to 1s and all cell empty flags to 1s
+	for (uint8_t row=1; row<=9; row++){
+ a20:	3f 5f       	subi	r19, 0xFF	; 255
+ a22:	3a 30       	cpi	r19, 0x0A	; 10
+ a24:	c8 f2       	brcs	.-78     	; 0x9d8 <sudoku_clear+0x2e>
+ a26:	81 e0       	ldi	r24, 0x01	; 1
+ a28:	07 c0       	rjmp	.+14     	; 0xa38 <sudoku_clear+0x8e>
+		si_CBM_i(row, 4) = 0xFF;
+		si_CBM_i(row, 7) = 0xFF;
+	}
+	
+	for (uint8_t col=1; col<=9; col++){
+		si_CMi(col) = 0xFF;
+ a2a:	e8 2f       	mov	r30, r24
+ a2c:	f0 e0       	ldi	r31, 0x00	; 0
+ a2e:	e4 54       	subi	r30, 0x44	; 68
+ a30:	ff 4f       	sbci	r31, 0xFF	; 255
+ a32:	9f ef       	ldi	r25, 0xFF	; 255
+ a34:	90 83       	st	Z, r25
+		si_CBM_i(row, 1) = 0xFF;
+		si_CBM_i(row, 4) = 0xFF;
+		si_CBM_i(row, 7) = 0xFF;
+	}
+	
+	for (uint8_t col=1; col<=9; col++){
+ a36:	8f 5f       	subi	r24, 0xFF	; 255
+ a38:	8a 30       	cpi	r24, 0x0A	; 10
+ a3a:	b8 f3       	brcs	.-18     	; 0xa2a <sudoku_clear+0x80>
+		si_CMi(col) = 0xFF;
+	}
+	
+	// Set MDR's "first row of band" bit to 1 for rows 1, 4, 7
+	si_MDR(1) |= 1;
+ a3c:	ea eb       	ldi	r30, 0xBA	; 186
+ a3e:	f0 e0       	ldi	r31, 0x00	; 0
+ a40:	81 81       	ldd	r24, Z+1	; 0x01
+ a42:	81 60       	ori	r24, 0x01	; 1
+ a44:	81 83       	std	Z+1, r24	; 0x01
+	si_MDR(4) |= 1;
+ a46:	86 a5       	ldd	r24, Z+46	; 0x2e
+ a48:	81 60       	ori	r24, 0x01	; 1
+ a4a:	86 a7       	std	Z+46, r24	; 0x2e
+	si_MDR(7) |= 1;
+ a4c:	e5 e1       	ldi	r30, 0x15	; 21
+ a4e:	f1 e0       	ldi	r31, 0x01	; 1
+ a50:	80 81       	ld	r24, Z
+ a52:	81 60       	ori	r24, 0x01	; 1
+ a54:	80 83       	st	Z, r24
+	
+	si_NCM = 0xFF;
+ a56:	8f ef       	ldi	r24, 0xFF	; 255
+ a58:	80 93 41 01 	sts	0x0141, r24	; 0x800141 <solver_input+0x87>
+	si_FCC = 1;
+ a5c:	81 e0       	ldi	r24, 0x01	; 1
+ a5e:	80 93 42 01 	sts	0x0142, r24	; 0x800142 <solver_input+0x88>
+ a62:	08 95       	ret
+
+00000a64 <initialize>:
+	}
+}
+
+void initialize(){
+	// Enable global interrupts for when timer/counter overflows and for USART
+	sei();	
+ a64:	78 94       	sei
+		
+	// When the program starts, the LED display should not display any number
+	// (we will initialize each digit with the value 0xFF) and the sudoku data 
+	// should be cleared.
+	sudoku_clear();
+ a66:	0e 94 d5 04 	call	0x9aa	; 0x9aa <sudoku_clear>
+	
+	// If sudoku_clear_flag is equal to 0x00 then data have not been cleared (flag is not set).
+	sudoku_clear_flag = 1;
+ a6a:	81 e0       	ldi	r24, 0x01	; 1
+ a6c:	80 93 66 00 	sts	0x0066, r24	; 0x800066 <sudoku_clear_flag>
+	
+	// Set Port C to output for the progress bar leds
+	DDRC = 0xFF;
+ a70:	8f ef       	ldi	r24, 0xFF	; 255
+ a72:	84 bb       	out	0x14, r24	; 20
+	
+	// INT0 Initialization
+	INT0_init();
+ a74:	0e 94 c7 03 	call	0x78e	; 0x78e <INT0_init>
+	
+	// Timer 1 initialization
+	TIMER1_init(TIMER1_TARGET_VALUE);
+ a78:	81 e1       	ldi	r24, 0x11	; 17
+ a7a:	9a e7       	ldi	r25, 0x7A	; 122
+ a7c:	0e 94 d4 03 	call	0x7a8	; 0x7a8 <TIMER1_init>
+	
+	// USART Initialization
+	USART_init(UBRR_value);
+ a80:	80 e4       	ldi	r24, 0x40	; 64
+ a82:	90 e0       	ldi	r25, 0x00	; 0
+ a84:	0e 94 de 03 	call	0x7bc	; 0x7bc <USART_init>
+	
+	// initialize global variables
+	state = STATE_IDLE;
+ a88:	10 92 65 00 	sts	0x0065, r1	; 0x800065 <state>
+	cmd = NONE;
+ a8c:	10 92 66 01 	sts	0x0166, r1	; 0x800166 <cmd>
+	last_sent_x = 0;
+ a90:	10 92 68 00 	sts	0x0068, r1	; 0x800068 <last_sent_x>
+	last_sent_y = 0;
+ a94:	10 92 67 00 	sts	0x0067, r1	; 0x800067 <last_sent_y>
+ a98:	08 95       	ret
+
+00000a9a <send_char>:
+ *	- If UDRE is one, the buffer is empty, and therefore ready to be written.
+ *
+ *-----------------------------------------------------------*/
+void send_char(uint8_t data){
+	// Wait for empty transmit buffer
+	while(!(UCSRA & (1<<UDRE)));
+ a9a:	5d 9b       	sbis	0x0b, 5	; 11
+ a9c:	fe cf       	rjmp	.-4      	; 0xa9a <send_char>
+	
+	#ifndef SIMULATION
+		UDR = data;
+ a9e:	8c b9       	out	0x0c, r24	; 12
+ aa0:	08 95       	ret
+
+00000aa2 <transmit_ok_response>:
+ *	- Part of this code is from the ATmega16 manual (p. 151)
+ *	- Response will be OK<CR><LF> (0x4F 0x4B 0x0D 0x0A)
+ *
+ *-----------------------------------------------------------*/
+void transmit_ok_response(){
+	send_char('O');
+ aa2:	8f e4       	ldi	r24, 0x4F	; 79
+ aa4:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char('K');
+ aa8:	8b e4       	ldi	r24, 0x4B	; 75
+ aaa:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char(0x0D);	// '<CR>'
+ aae:	8d e0       	ldi	r24, 0x0D	; 13
+ ab0:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char(0x0A);	// '<LF>'
+ ab4:	8a e0       	ldi	r24, 0x0A	; 10
+ ab6:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+ aba:	08 95       	ret
+
+00000abc <transmit_done_response>:
+ *	- Part of this code is from the ATmega16 manual (p. 151)
+ *	- Response will be D<CR><LF> (0x44 0x0D 0x0A)
+ *
+ *-----------------------------------------------------------*/
+void transmit_done_response(){
+	send_char('D');
+ abc:	84 e4       	ldi	r24, 0x44	; 68
+ abe:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char(0x0D);	// '<CR>'
+ ac2:	8d e0       	ldi	r24, 0x0D	; 13
+ ac4:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char(0x0A);	// '<LF>'
+ ac8:	8a e0       	ldi	r24, 0x0A	; 10
+ aca:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+ ace:	08 95       	ret
+
+00000ad0 <convert_decimal_digit_to_onehot>:
+	#endif
+}
+
+
+uint8_t convert_decimal_digit_to_onehot(uint8_t decimal_digit){
+	if (decimal_digit == 0)	return 0x0F;
+ ad0:	88 23       	and	r24, r24
+ ad2:	51 f0       	breq	.+20     	; 0xae8 <convert_decimal_digit_to_onehot+0x18>
+	
+	return 1 << (decimal_digit-1);
+ ad4:	28 2f       	mov	r18, r24
+ ad6:	30 e0       	ldi	r19, 0x00	; 0
+ ad8:	21 50       	subi	r18, 0x01	; 1
+ ada:	31 09       	sbc	r19, r1
+ adc:	81 e0       	ldi	r24, 0x01	; 1
+ ade:	01 c0       	rjmp	.+2      	; 0xae2 <convert_decimal_digit_to_onehot+0x12>
+ ae0:	88 0f       	add	r24, r24
+ ae2:	2a 95       	dec	r18
+ ae4:	ea f7       	brpl	.-6      	; 0xae0 <convert_decimal_digit_to_onehot+0x10>
+ ae6:	08 95       	ret
+	#endif
+}
+
+
+uint8_t convert_decimal_digit_to_onehot(uint8_t decimal_digit){
+	if (decimal_digit == 0)	return 0x0F;
+ ae8:	8f e0       	ldi	r24, 0x0F	; 15
+	
+	return 1 << (decimal_digit-1);
+}
+ aea:	08 95       	ret
+
+00000aec <sudoku_insert_value>:
+ *	allocated memory space.
+ *	-This function stores <VALUE> field in the memory, based 
+ *	 on the value of <X> and <Y> variables. 
+ *
+ *----------------------------------------------------------*/
+void sudoku_insert_value(){	
+ aec:	ef 92       	push	r14
+ aee:	ff 92       	push	r15
+ af0:	0f 93       	push	r16
+ af2:	1f 93       	push	r17
+ af4:	cf 93       	push	r28
+ af6:	df 93       	push	r29
+	// Received X & Y are 1-based.
+	uint8_t x = cmd_digits[0];
+ af8:	e2 e6       	ldi	r30, 0x62	; 98
+ afa:	f0 e0       	ldi	r31, 0x00	; 0
+ afc:	10 81       	ld	r17, Z
+	uint8_t y = cmd_digits[1];
+ afe:	01 81       	ldd	r16, Z+1	; 0x01
+	uint8_t decimal_digit = cmd_digits[2];
+ b00:	f2 80       	ldd	r15, Z+2	; 0x02
+	uint8_t digit = convert_decimal_digit_to_onehot(decimal_digit);
+ b02:	8f 2d       	mov	r24, r15
+ b04:	0e 94 68 05 	call	0xad0	; 0xad0 <convert_decimal_digit_to_onehot>
+	
+	sudoku_cells[9*(x-1)+(y-1)] = digit;
+ b08:	c1 2f       	mov	r28, r17
+ b0a:	d0 e0       	ldi	r29, 0x00	; 0
+ b0c:	be 01       	movw	r22, r28
+ b0e:	61 50       	subi	r22, 0x01	; 1
+ b10:	71 09       	sbc	r23, r1
+ b12:	fb 01       	movw	r30, r22
+ b14:	ee 0f       	add	r30, r30
+ b16:	ff 1f       	adc	r31, r31
+ b18:	ee 0f       	add	r30, r30
+ b1a:	ff 1f       	adc	r31, r31
+ b1c:	ee 0f       	add	r30, r30
+ b1e:	ff 1f       	adc	r31, r31
+ b20:	e6 0f       	add	r30, r22
+ b22:	f7 1f       	adc	r31, r23
+ b24:	40 2f       	mov	r20, r16
+ b26:	50 e0       	ldi	r21, 0x00	; 0
+ b28:	da 01       	movw	r26, r20
+ b2a:	11 97       	sbiw	r26, 0x01	; 1
+ b2c:	ea 0f       	add	r30, r26
+ b2e:	fb 1f       	adc	r31, r27
+ b30:	e7 59       	subi	r30, 0x97	; 151
+ b32:	ff 4f       	sbci	r31, 0xFF	; 255
+ b34:	80 83       	st	Z, r24
+	
+	// Update solver_input data flags & masks
+	// --------------------------------------
+	
+	// Handle 9 differently
+	if (decimal_digit == 9){
+ b36:	99 e0       	ldi	r25, 0x09	; 9
+ b38:	f9 12       	cpse	r15, r25
+ b3a:	43 c0       	rjmp	.+134    	; 0xbc2 <sudoku_insert_value+0xd6>
+		// Remove 9 from CRM
+		si_MDR(x) &= ~( 1 << CRM_9 );
+ b3c:	8f e0       	ldi	r24, 0x0F	; 15
+ b3e:	86 9f       	mul	r24, r22
+ b40:	70 01       	movw	r14, r0
+ b42:	87 9f       	mul	r24, r23
+ b44:	f0 0c       	add	r15, r0
+ b46:	11 24       	eor	r1, r1
+ b48:	f7 01       	movw	r30, r14
+ b4a:	31 96       	adiw	r30, 0x01	; 1
+ b4c:	9f 01       	movw	r18, r30
+ b4e:	26 54       	subi	r18, 0x46	; 70
+ b50:	3f 4f       	sbci	r19, 0xFF	; 255
+ b52:	e9 01       	movw	r28, r18
+ b54:	88 81       	ld	r24, Y
+ b56:	8f 7d       	andi	r24, 0xDF	; 223
+ b58:	88 83       	st	Y, r24
+		
+		// Handle a 9 on the 9-th column even more differently
+		if (y == 9){
+ b5a:	09 30       	cpi	r16, 0x09	; 9
+ b5c:	49 f4       	brne	.+18     	; 0xb70 <sudoku_insert_value+0x84>
+			// Remove 9 from NCM and CBM_3 and mark cell as clue
+			si_FCC &= ~( 1 << NCM_9 );
+ b5e:	a2 e4       	ldi	r26, 0x42	; 66
+ b60:	b1 e0       	ldi	r27, 0x01	; 1
+ b62:	8c 91       	ld	r24, X
+ b64:	8e 7f       	andi	r24, 0xFE	; 254
+ b66:	8c 93       	st	X, r24
+			si_MDR(x) &= ~( (1 << CRCE_9) | 1 << 3 );
+ b68:	88 81       	ld	r24, Y
+ b6a:	87 7e       	andi	r24, 0xE7	; 231
+ b6c:	88 83       	st	Y, r24
+ b6e:	dc c0       	rjmp	.+440    	; 0xd28 <sudoku_insert_value+0x23c>
+		}
+		else {
+			// Remove 9 from NCM and CBM_3 and mark cell as clue
+			si_NCM &= ~( 1 << (y-1) );
+ b70:	21 e0       	ldi	r18, 0x01	; 1
+ b72:	30 e0       	ldi	r19, 0x00	; 0
+ b74:	a9 01       	movw	r20, r18
+ b76:	0a 2e       	mov	r0, r26
+ b78:	02 c0       	rjmp	.+4      	; 0xb7e <sudoku_insert_value+0x92>
+ b7a:	44 0f       	add	r20, r20
+ b7c:	55 1f       	adc	r21, r21
+ b7e:	0a 94       	dec	r0
+ b80:	e2 f7       	brpl	.-8      	; 0xb7a <sudoku_insert_value+0x8e>
+ b82:	40 95       	com	r20
+ b84:	61 e4       	ldi	r22, 0x41	; 65
+ b86:	71 e0       	ldi	r23, 0x01	; 1
+ b88:	eb 01       	movw	r28, r22
+ b8a:	88 81       	ld	r24, Y
+ b8c:	84 23       	and	r24, r20
+ b8e:	88 83       	st	Y, r24
+			si_MDR(x) &= ~( 1 <<  ((y-1) / 3 + 1));
+ b90:	cd 01       	movw	r24, r26
+ b92:	63 e0       	ldi	r22, 0x03	; 3
+ b94:	70 e0       	ldi	r23, 0x00	; 0
+ b96:	0e 94 85 07 	call	0xf0a	; 0xf0a <__divmodhi4>
+ b9a:	6f 5f       	subi	r22, 0xFF	; 255
+ b9c:	7f 4f       	sbci	r23, 0xFF	; 255
+ b9e:	02 c0       	rjmp	.+4      	; 0xba4 <sudoku_insert_value+0xb8>
+ ba0:	22 0f       	add	r18, r18
+ ba2:	33 1f       	adc	r19, r19
+ ba4:	6a 95       	dec	r22
+ ba6:	e2 f7       	brpl	.-8      	; 0xba0 <sudoku_insert_value+0xb4>
+ ba8:	e6 54       	subi	r30, 0x46	; 70
+ baa:	ff 4f       	sbci	r31, 0xFF	; 255
+ bac:	20 95       	com	r18
+ bae:	80 81       	ld	r24, Z
+ bb0:	28 23       	and	r18, r24
+ bb2:	20 83       	st	Z, r18
+			si_CRCE(x) &= ~( 1 << (y-1) );
+ bb4:	e7 01       	movw	r28, r14
+ bb6:	c6 54       	subi	r28, 0x46	; 70
+ bb8:	df 4f       	sbci	r29, 0xFF	; 255
+ bba:	88 81       	ld	r24, Y
+ bbc:	48 23       	and	r20, r24
+ bbe:	48 83       	st	Y, r20
+ bc0:	b3 c0       	rjmp	.+358    	; 0xd28 <sudoku_insert_value+0x23c>
+		}
+	}
+	else {
+		// Mark cell as clue
+		if (y == 9)		si_MDR(x) &= ~(1 << CRCE_9);
+ bc2:	09 30       	cpi	r16, 0x09	; 9
+ bc4:	61 f4       	brne	.+24     	; 0xbde <sudoku_insert_value+0xf2>
+ bc6:	9f e0       	ldi	r25, 0x0F	; 15
+ bc8:	96 9f       	mul	r25, r22
+ bca:	f0 01       	movw	r30, r0
+ bcc:	97 9f       	mul	r25, r23
+ bce:	f0 0d       	add	r31, r0
+ bd0:	11 24       	eor	r1, r1
+ bd2:	e5 54       	subi	r30, 0x45	; 69
+ bd4:	ff 4f       	sbci	r31, 0xFF	; 255
+ bd6:	90 81       	ld	r25, Z
+ bd8:	9f 7e       	andi	r25, 0xEF	; 239
+ bda:	90 83       	st	Z, r25
+ bdc:	16 c0       	rjmp	.+44     	; 0xc0a <sudoku_insert_value+0x11e>
+		else			si_CRCE(x) &= ~( 1 << (y-1) );
+ bde:	9f e0       	ldi	r25, 0x0F	; 15
+ be0:	96 9f       	mul	r25, r22
+ be2:	90 01       	movw	r18, r0
+ be4:	97 9f       	mul	r25, r23
+ be6:	30 0d       	add	r19, r0
+ be8:	11 24       	eor	r1, r1
+ bea:	e1 e0       	ldi	r30, 0x01	; 1
+ bec:	f0 e0       	ldi	r31, 0x00	; 0
+ bee:	0a 2e       	mov	r0, r26
+ bf0:	02 c0       	rjmp	.+4      	; 0xbf6 <sudoku_insert_value+0x10a>
+ bf2:	ee 0f       	add	r30, r30
+ bf4:	ff 1f       	adc	r31, r31
+ bf6:	0a 94       	dec	r0
+ bf8:	e2 f7       	brpl	.-8      	; 0xbf2 <sudoku_insert_value+0x106>
+ bfa:	26 54       	subi	r18, 0x46	; 70
+ bfc:	3f 4f       	sbci	r19, 0xFF	; 255
+ bfe:	0e 2f       	mov	r16, r30
+ c00:	00 95       	com	r16
+ c02:	f9 01       	movw	r30, r18
+ c04:	90 81       	ld	r25, Z
+ c06:	90 23       	and	r25, r16
+ c08:	90 83       	st	Z, r25
+		
+		// Remove digit from CRM, CMi, and CBMs in all 3 rows
+		si_CRM(x) &= ~digit;
+ c0a:	9f e0       	ldi	r25, 0x0F	; 15
+ c0c:	96 9f       	mul	r25, r22
+ c0e:	70 01       	movw	r14, r0
+ c10:	97 9f       	mul	r25, r23
+ c12:	f0 0c       	add	r15, r0
+ c14:	11 24       	eor	r1, r1
+ c16:	28 2f       	mov	r18, r24
+ c18:	20 95       	com	r18
+ c1a:	b7 01       	movw	r22, r14
+ c1c:	64 54       	subi	r22, 0x44	; 68
+ c1e:	7f 4f       	sbci	r23, 0xFF	; 255
+ c20:	fb 01       	movw	r30, r22
+ c22:	80 81       	ld	r24, Z
+ c24:	82 23       	and	r24, r18
+ c26:	80 83       	st	Z, r24
+		si_CMi(y) &= ~digit;
+ c28:	44 54       	subi	r20, 0x44	; 68
+ c2a:	5f 4f       	sbci	r21, 0xFF	; 255
+ c2c:	fa 01       	movw	r30, r20
+ c2e:	80 81       	ld	r24, Z
+ c30:	82 23       	and	r24, r18
+ c32:	80 83       	st	Z, r24
+		si_CBM_i(x, y) &= ~digit;
+ c34:	cd 01       	movw	r24, r26
+ c36:	63 e0       	ldi	r22, 0x03	; 3
+ c38:	70 e0       	ldi	r23, 0x00	; 0
+ c3a:	0e 94 85 07 	call	0xf0a	; 0xf0a <__divmodhi4>
+ c3e:	f7 01       	movw	r30, r14
+ c40:	3c 96       	adiw	r30, 0x0c	; 12
+ c42:	e6 0f       	add	r30, r22
+ c44:	f7 1f       	adc	r31, r23
+ c46:	e6 54       	subi	r30, 0x46	; 70
+ c48:	ff 4f       	sbci	r31, 0xFF	; 255
+ c4a:	80 81       	ld	r24, Z
+ c4c:	82 23       	and	r24, r18
+ c4e:	80 83       	st	Z, r24
+		if (x % 3 == 0){
+ c50:	9b ea       	ldi	r25, 0xAB	; 171
+ c52:	19 9f       	mul	r17, r25
+ c54:	91 2d       	mov	r25, r1
+ c56:	11 24       	eor	r1, r1
+ c58:	96 95       	lsr	r25
+ c5a:	89 2f       	mov	r24, r25
+ c5c:	88 0f       	add	r24, r24
+ c5e:	98 0f       	add	r25, r24
+ c60:	19 1b       	sub	r17, r25
+ c62:	91 2f       	mov	r25, r17
+ c64:	01 f5       	brne	.+64     	; 0xca6 <sudoku_insert_value+0x1ba>
+			si_CBM_i(x-2, y) &= ~digit;
+ c66:	ae 01       	movw	r20, r28
+ c68:	43 50       	subi	r20, 0x03	; 3
+ c6a:	51 09       	sbc	r21, r1
+ c6c:	3f e0       	ldi	r19, 0x0F	; 15
+ c6e:	34 9f       	mul	r19, r20
+ c70:	f0 01       	movw	r30, r0
+ c72:	35 9f       	mul	r19, r21
+ c74:	f0 0d       	add	r31, r0
+ c76:	11 24       	eor	r1, r1
+ c78:	3c 96       	adiw	r30, 0x0c	; 12
+ c7a:	e6 0f       	add	r30, r22
+ c7c:	f7 1f       	adc	r31, r23
+ c7e:	e6 54       	subi	r30, 0x46	; 70
+ c80:	ff 4f       	sbci	r31, 0xFF	; 255
+ c82:	80 81       	ld	r24, Z
+ c84:	82 23       	and	r24, r18
+ c86:	80 83       	st	Z, r24
+			si_CBM_i(x-1, y) &= ~digit;
+ c88:	4f 5f       	subi	r20, 0xFF	; 255
+ c8a:	5f 4f       	sbci	r21, 0xFF	; 255
+ c8c:	34 9f       	mul	r19, r20
+ c8e:	f0 01       	movw	r30, r0
+ c90:	35 9f       	mul	r19, r21
+ c92:	f0 0d       	add	r31, r0
+ c94:	11 24       	eor	r1, r1
+ c96:	3c 96       	adiw	r30, 0x0c	; 12
+ c98:	e6 0f       	add	r30, r22
+ c9a:	f7 1f       	adc	r31, r23
+ c9c:	e6 54       	subi	r30, 0x46	; 70
+ c9e:	ff 4f       	sbci	r31, 0xFF	; 255
+ ca0:	80 81       	ld	r24, Z
+ ca2:	82 23       	and	r24, r18
+ ca4:	80 83       	st	Z, r24
+		}
+		if (x % 3 == 1){
+ ca6:	91 30       	cpi	r25, 0x01	; 1
+ ca8:	f1 f4       	brne	.+60     	; 0xce6 <sudoku_insert_value+0x1fa>
+			si_CBM_i(x+1, y) &= ~digit;
+ caa:	3f e0       	ldi	r19, 0x0F	; 15
+ cac:	3c 9f       	mul	r19, r28
+ cae:	f0 01       	movw	r30, r0
+ cb0:	3d 9f       	mul	r19, r29
+ cb2:	f0 0d       	add	r31, r0
+ cb4:	11 24       	eor	r1, r1
+ cb6:	3c 96       	adiw	r30, 0x0c	; 12
+ cb8:	e6 0f       	add	r30, r22
+ cba:	f7 1f       	adc	r31, r23
+ cbc:	e6 54       	subi	r30, 0x46	; 70
+ cbe:	ff 4f       	sbci	r31, 0xFF	; 255
+ cc0:	80 81       	ld	r24, Z
+ cc2:	82 23       	and	r24, r18
+ cc4:	80 83       	st	Z, r24
+			si_CBM_i(x+2, y) &= ~digit;
+ cc6:	ae 01       	movw	r20, r28
+ cc8:	4f 5f       	subi	r20, 0xFF	; 255
+ cca:	5f 4f       	sbci	r21, 0xFF	; 255
+ ccc:	34 9f       	mul	r19, r20
+ cce:	f0 01       	movw	r30, r0
+ cd0:	35 9f       	mul	r19, r21
+ cd2:	f0 0d       	add	r31, r0
+ cd4:	11 24       	eor	r1, r1
+ cd6:	3c 96       	adiw	r30, 0x0c	; 12
+ cd8:	e6 0f       	add	r30, r22
+ cda:	f7 1f       	adc	r31, r23
+ cdc:	e6 54       	subi	r30, 0x46	; 70
+ cde:	ff 4f       	sbci	r31, 0xFF	; 255
+ ce0:	80 81       	ld	r24, Z
+ ce2:	82 23       	and	r24, r18
+ ce4:	80 83       	st	Z, r24
+		}
+		if (x % 3 == 2){
+ ce6:	92 30       	cpi	r25, 0x02	; 2
+ ce8:	f9 f4       	brne	.+62     	; 0xd28 <sudoku_insert_value+0x23c>
+			si_CBM_i(x-1, y) &= ~digit;
+ cea:	ae 01       	movw	r20, r28
+ cec:	42 50       	subi	r20, 0x02	; 2
+ cee:	51 09       	sbc	r21, r1
+ cf0:	9f e0       	ldi	r25, 0x0F	; 15
+ cf2:	94 9f       	mul	r25, r20
+ cf4:	f0 01       	movw	r30, r0
+ cf6:	95 9f       	mul	r25, r21
+ cf8:	f0 0d       	add	r31, r0
+ cfa:	11 24       	eor	r1, r1
+ cfc:	3c 96       	adiw	r30, 0x0c	; 12
+ cfe:	e6 0f       	add	r30, r22
+ d00:	f7 1f       	adc	r31, r23
+ d02:	e6 54       	subi	r30, 0x46	; 70
+ d04:	ff 4f       	sbci	r31, 0xFF	; 255
+ d06:	80 81       	ld	r24, Z
+ d08:	82 23       	and	r24, r18
+ d0a:	80 83       	st	Z, r24
+			si_CBM_i(x+1, y) &= ~digit;
+ d0c:	9c 9f       	mul	r25, r28
+ d0e:	f0 01       	movw	r30, r0
+ d10:	9d 9f       	mul	r25, r29
+ d12:	f0 0d       	add	r31, r0
+ d14:	11 24       	eor	r1, r1
+ d16:	3c 96       	adiw	r30, 0x0c	; 12
+ d18:	6e 0f       	add	r22, r30
+ d1a:	7f 1f       	adc	r23, r31
+ d1c:	fb 01       	movw	r30, r22
+ d1e:	e6 54       	subi	r30, 0x46	; 70
+ d20:	ff 4f       	sbci	r31, 0xFF	; 255
+ d22:	80 81       	ld	r24, Z
+ d24:	28 23       	and	r18, r24
+ d26:	20 83       	st	Z, r18
+		}
+	}
+		
+	// Increment FCC (bits 7:1)
+	si_FCC += 2;
+ d28:	e2 e4       	ldi	r30, 0x42	; 66
+ d2a:	f1 e0       	ldi	r31, 0x01	; 1
+ d2c:	80 81       	ld	r24, Z
+ d2e:	8e 5f       	subi	r24, 0xFE	; 254
+ d30:	80 83       	st	Z, r24
+}
+ d32:	df 91       	pop	r29
+ d34:	cf 91       	pop	r28
+ d36:	1f 91       	pop	r17
+ d38:	0f 91       	pop	r16
+ d3a:	ff 90       	pop	r15
+ d3c:	ef 90       	pop	r14
+ d3e:	08 95       	ret
+
+00000d40 <convert_onehot_digit_to_decimal>:
+	
+	return 1 << (decimal_digit-1);
+}
+
+uint8_t convert_onehot_digit_to_decimal(uint8_t digit){
+	if (digit == 0x0F)	return 0;
+ d40:	8f 30       	cpi	r24, 0x0F	; 15
+ d42:	61 f0       	breq	.+24     	; 0xd5c <convert_onehot_digit_to_decimal+0x1c>
+	
+	uint8_t decimal_digit = (digit == 0)? 9 : 0;
+ d44:	81 11       	cpse	r24, r1
+ d46:	02 c0       	rjmp	.+4      	; 0xd4c <convert_onehot_digit_to_decimal+0xc>
+ d48:	99 e0       	ldi	r25, 0x09	; 9
+ d4a:	04 c0       	rjmp	.+8      	; 0xd54 <convert_onehot_digit_to_decimal+0x14>
+ d4c:	90 e0       	ldi	r25, 0x00	; 0
+ d4e:	02 c0       	rjmp	.+4      	; 0xd54 <convert_onehot_digit_to_decimal+0x14>
+	while (digit != 0){
+		digit = digit >> 1;
+ d50:	86 95       	lsr	r24
+		decimal_digit++;
+ d52:	9f 5f       	subi	r25, 0xFF	; 255
+
+uint8_t convert_onehot_digit_to_decimal(uint8_t digit){
+	if (digit == 0x0F)	return 0;
+	
+	uint8_t decimal_digit = (digit == 0)? 9 : 0;
+	while (digit != 0){
+ d54:	81 11       	cpse	r24, r1
+ d56:	fc cf       	rjmp	.-8      	; 0xd50 <convert_onehot_digit_to_decimal+0x10>
+		digit = digit >> 1;
+		decimal_digit++;
+	}
+	return decimal_digit;
+ d58:	89 2f       	mov	r24, r25
+ d5a:	08 95       	ret
+	
+	return 1 << (decimal_digit-1);
+}
+
+uint8_t convert_onehot_digit_to_decimal(uint8_t digit){
+	if (digit == 0x0F)	return 0;
+ d5c:	80 e0       	ldi	r24, 0x00	; 0
+	while (digit != 0){
+		digit = digit >> 1;
+		decimal_digit++;
+	}
+	return decimal_digit;
+}
+ d5e:	08 95       	ret
+
+00000d60 <transmit_cell_digit>:
+ *	- Retrieves the corresponding cell digit
+ *	- Part of this code is from the ATmega16 manual (p. 151)
+ *	- Response will be N<X><Y><CR><LF>
+ *
+ *-----------------------------------------------------------*/
+void transmit_cell_digit(uint8_t x, uint8_t y){
+ d60:	1f 93       	push	r17
+ d62:	cf 93       	push	r28
+ d64:	df 93       	push	r29
+ d66:	d8 2f       	mov	r29, r24
+ d68:	c6 2f       	mov	r28, r22
+	uint8_t decimal_digit = convert_onehot_digit_to_decimal(sudoku_cells[9*(x-1) + y-1]);
+ d6a:	90 e0       	ldi	r25, 0x00	; 0
+ d6c:	01 97       	sbiw	r24, 0x01	; 1
+ d6e:	fc 01       	movw	r30, r24
+ d70:	ee 0f       	add	r30, r30
+ d72:	ff 1f       	adc	r31, r31
+ d74:	ee 0f       	add	r30, r30
+ d76:	ff 1f       	adc	r31, r31
+ d78:	ee 0f       	add	r30, r30
+ d7a:	ff 1f       	adc	r31, r31
+ d7c:	e8 0f       	add	r30, r24
+ d7e:	f9 1f       	adc	r31, r25
+ d80:	e6 0f       	add	r30, r22
+ d82:	f1 1d       	adc	r31, r1
+ d84:	e8 59       	subi	r30, 0x98	; 152
+ d86:	ff 4f       	sbci	r31, 0xFF	; 255
+ d88:	80 81       	ld	r24, Z
+ d8a:	0e 94 a0 06 	call	0xd40	; 0xd40 <convert_onehot_digit_to_decimal>
+ d8e:	18 2f       	mov	r17, r24
+	
+	send_char('N');
+ d90:	8e e4       	ldi	r24, 0x4E	; 78
+ d92:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char('0' + x);
+ d96:	80 e3       	ldi	r24, 0x30	; 48
+ d98:	8d 0f       	add	r24, r29
+ d9a:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char('0' + y);
+ d9e:	80 e3       	ldi	r24, 0x30	; 48
+ da0:	8c 0f       	add	r24, r28
+ da2:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char('0' + decimal_digit);
+ da6:	80 e3       	ldi	r24, 0x30	; 48
+ da8:	81 0f       	add	r24, r17
+ daa:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char(0x0D);	// '<CR>'
+ dae:	8d e0       	ldi	r24, 0x0D	; 13
+ db0:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+	send_char(0x0A);	// '<LF>'
+ db4:	8a e0       	ldi	r24, 0x0A	; 10
+ db6:	0e 94 4d 05 	call	0xa9a	; 0xa9a <send_char>
+};
+ dba:	df 91       	pop	r29
+ dbc:	cf 91       	pop	r28
+ dbe:	1f 91       	pop	r17
+ dc0:	08 95       	ret
+
+00000dc2 <USART_command_actions>:
+void USART_command_actions(){
+	// Check received command against the valid USART commands.
+	// A valid command may not be executed if it is not allowed in the FSM's current state.
+	// STATE_IDLE accepts AT<CR><LF>, C<CR><LF>, N<X><Y><VALUE><CR><LF>, P<CR><LF>, S<CR><LF>, T<CR><LF> commands
+	// STATE_SOLVING accepts AT<CR><LF>, B<CR><LF>, D<X><Y><CR><LF> commands.
+	uint8_t command = cmd;
+ dc2:	e0 91 66 01 	lds	r30, 0x0166	; 0x800166 <cmd>
+	
+	// clear a finished (but not necessarily valid) command
+	if ((cmd & CRLF_flags) == CRLF_flags){
+ dc6:	8e 2f       	mov	r24, r30
+ dc8:	80 7c       	andi	r24, 0xC0	; 192
+ dca:	80 3c       	cpi	r24, 0xC0	; 192
+ dcc:	11 f4       	brne	.+4      	; 0xdd2 <USART_command_actions+0x10>
+		cmd = NONE;
+ dce:	10 92 66 01 	sts	0x0166, r1	; 0x800166 <cmd>
+	}
+	
+	switch (command){
+ dd2:	8e 2f       	mov	r24, r30
+ dd4:	90 e0       	ldi	r25, 0x00	; 0
+ dd6:	fc 01       	movw	r30, r24
+ dd8:	e5 5c       	subi	r30, 0xC5	; 197
+ dda:	f1 09       	sbc	r31, r1
+ ddc:	e2 32       	cpi	r30, 0x22	; 34
+ dde:	f1 05       	cpc	r31, r1
+ de0:	08 f0       	brcs	.+2      	; 0xde4 <USART_command_actions+0x22>
+ de2:	7a c0       	rjmp	.+244    	; 0xed8 <USART_command_actions+0x116>
+ de4:	e6 5d       	subi	r30, 0xD6	; 214
+ de6:	ff 4f       	sbci	r31, 0xFF	; 255
+ de8:	0c 94 99 07 	jmp	0xf32	; 0xf32 <__tablejump2__>
+		case AT_CR_LF:
+			transmit_ok_response();
+ dec:	0e 94 51 05 	call	0xaa2	; 0xaa2 <transmit_ok_response>
+			break;
+ df0:	08 95       	ret
+		
+		case C_CR_LF:
+			if (state == STATE_SOLVING)	break;
+ df2:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <state>
+ df6:	81 30       	cpi	r24, 0x01	; 1
+ df8:	09 f4       	brne	.+2      	; 0xdfc <USART_command_actions+0x3a>
+ dfa:	6e c0       	rjmp	.+220    	; 0xed8 <USART_command_actions+0x116>
+			// set sudoku_clear_flag
+			sudoku_clear_flag = 1;
+ dfc:	81 e0       	ldi	r24, 0x01	; 1
+ dfe:	80 93 66 00 	sts	0x0066, r24	; 0x800066 <sudoku_clear_flag>
+			sudoku_clear();
+ e02:	0e 94 d5 04 	call	0x9aa	; 0x9aa <sudoku_clear>
+			transmit_ok_response();
+ e06:	0e 94 51 05 	call	0xaa2	; 0xaa2 <transmit_ok_response>
+			break;
+ e0a:	08 95       	ret
+		
+		case N_X_Y_VAL_CR_LF:
+			if (state == STATE_SOLVING)	break;
+ e0c:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <state>
+ e10:	81 30       	cpi	r24, 0x01	; 1
+ e12:	09 f4       	brne	.+2      	; 0xe16 <USART_command_actions+0x54>
+ e14:	61 c0       	rjmp	.+194    	; 0xed8 <USART_command_actions+0x116>
+			// check sudoku_clear_flag and call clear() function if sudoku_clear_flag is not set
+			if (sudoku_clear_flag == 0){
+ e16:	80 91 66 00 	lds	r24, 0x0066	; 0x800066 <sudoku_clear_flag>
+ e1a:	81 11       	cpse	r24, r1
+ e1c:	05 c0       	rjmp	.+10     	; 0xe28 <USART_command_actions+0x66>
+				sudoku_clear_flag = 1;
+ e1e:	81 e0       	ldi	r24, 0x01	; 1
+ e20:	80 93 66 00 	sts	0x0066, r24	; 0x800066 <sudoku_clear_flag>
+				sudoku_clear();
+ e24:	0e 94 d5 04 	call	0x9aa	; 0x9aa <sudoku_clear>
+			}
+			sudoku_insert_value();
+ e28:	0e 94 76 05 	call	0xaec	; 0xaec <sudoku_insert_value>
+			transmit_ok_response();
+ e2c:	0e 94 51 05 	call	0xaa2	; 0xaa2 <transmit_ok_response>
+			break;
+ e30:	08 95       	ret
+		
+		case P_CR_LF:
+			if (state == STATE_SOLVING)	break;
+ e32:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <state>
+ e36:	81 30       	cpi	r24, 0x01	; 1
+ e38:	09 f4       	brne	.+2      	; 0xe3c <USART_command_actions+0x7a>
+ e3a:	4e c0       	rjmp	.+156    	; 0xed8 <USART_command_actions+0x116>
+			state = STATE_SOLVING;
+ e3c:	81 e0       	ldi	r24, 0x01	; 1
+ e3e:	80 93 65 00 	sts	0x0065, r24	; 0x800065 <state>
+			// clear sudoku_clear_flag
+			sudoku_clear_flag = 0;
+ e42:	10 92 66 00 	sts	0x0066, r1	; 0x800066 <sudoku_clear_flag>
+			transmit_ok_response();
+ e46:	0e 94 51 05 	call	0xaa2	; 0xaa2 <transmit_ok_response>
+			break;
+ e4a:	08 95       	ret
+		
+		case S_CR_LF:
+			if (state == STATE_SOLVING)	break;
+ e4c:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <state>
+ e50:	81 30       	cpi	r24, 0x01	; 1
+ e52:	09 f4       	brne	.+2      	; 0xe56 <USART_command_actions+0x94>
+ e54:	41 c0       	rjmp	.+130    	; 0xed8 <USART_command_actions+0x116>
+			// initialize indices
+			last_sent_x = 1;
+ e56:	81 e0       	ldi	r24, 0x01	; 1
+ e58:	80 93 68 00 	sts	0x0068, r24	; 0x800068 <last_sent_x>
+			last_sent_y = 1;
+ e5c:	80 93 67 00 	sts	0x0067, r24	; 0x800067 <last_sent_y>
+			transmit_cell_digit(last_sent_x, last_sent_y);
+ e60:	61 e0       	ldi	r22, 0x01	; 1
+ e62:	0e 94 b0 06 	call	0xd60	; 0xd60 <transmit_cell_digit>
+			break;
+ e66:	08 95       	ret
+		
+		case T_CR_LF:
+			if (state == STATE_SOLVING)	break;
+ e68:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <state>
+ e6c:	81 30       	cpi	r24, 0x01	; 1
+ e6e:	a1 f1       	breq	.+104    	; 0xed8 <USART_command_actions+0x116>
+			// check whether all cell digits have been sent (in which case, transmit D<CR><LF>)
+			if (last_sent_x >= 9 && last_sent_y >= 9){
+ e70:	90 91 68 00 	lds	r25, 0x0068	; 0x800068 <last_sent_x>
+ e74:	99 30       	cpi	r25, 0x09	; 9
+ e76:	48 f0       	brcs	.+18     	; 0xe8a <USART_command_actions+0xc8>
+ e78:	80 91 67 00 	lds	r24, 0x0067	; 0x800067 <last_sent_y>
+ e7c:	89 30       	cpi	r24, 0x09	; 9
+ e7e:	28 f0       	brcs	.+10     	; 0xe8a <USART_command_actions+0xc8>
+				transmit_done_response();
+ e80:	0e 94 5e 05 	call	0xabc	; 0xabc <transmit_done_response>
+				transmit_done_response();
+ e84:	0e 94 5e 05 	call	0xabc	; 0xabc <transmit_done_response>
+				break;
+ e88:	08 95       	ret
+			}
+			// increment indices (such that data is sent row-wise)
+			last_sent_y++;
+ e8a:	80 91 67 00 	lds	r24, 0x0067	; 0x800067 <last_sent_y>
+ e8e:	8f 5f       	subi	r24, 0xFF	; 255
+ e90:	80 93 67 00 	sts	0x0067, r24	; 0x800067 <last_sent_y>
+			if (last_sent_y > 9){
+ e94:	8a 30       	cpi	r24, 0x0A	; 10
+ e96:	30 f0       	brcs	.+12     	; 0xea4 <USART_command_actions+0xe2>
+				last_sent_y = 1;
+ e98:	81 e0       	ldi	r24, 0x01	; 1
+ e9a:	80 93 67 00 	sts	0x0067, r24	; 0x800067 <last_sent_y>
+				last_sent_x++;
+ e9e:	9f 5f       	subi	r25, 0xFF	; 255
+ ea0:	90 93 68 00 	sts	0x0068, r25	; 0x800068 <last_sent_x>
+			}
+			transmit_cell_digit(last_sent_x, last_sent_y);
+ ea4:	60 91 67 00 	lds	r22, 0x0067	; 0x800067 <last_sent_y>
+ ea8:	80 91 68 00 	lds	r24, 0x0068	; 0x800068 <last_sent_x>
+ eac:	0e 94 b0 06 	call	0xd60	; 0xd60 <transmit_cell_digit>
+			break;
+ eb0:	08 95       	ret
+		case OK_CR_LF:
+			// Do nothing
+			break;
+		
+		case B_CR_LF:
+			if (state == STATE_IDLE)	break;
+ eb2:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <state>
+ eb6:	88 23       	and	r24, r24
+ eb8:	79 f0       	breq	.+30     	; 0xed8 <USART_command_actions+0x116>
+			state = STATE_IDLE;
+ eba:	10 92 65 00 	sts	0x0065, r1	; 0x800065 <state>
+			transmit_ok_response();
+ ebe:	0e 94 51 05 	call	0xaa2	; 0xaa2 <transmit_ok_response>
+			break;
+ ec2:	08 95       	ret
+		
+		case D_X_Y_CR_LF:
+			if (state == STATE_IDLE)	break;
+ ec4:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <state>
+ ec8:	88 23       	and	r24, r24
+ eca:	31 f0       	breq	.+12     	; 0xed8 <USART_command_actions+0x116>
+			transmit_cell_digit(cmd_digits[0], cmd_digits[1]);
+ ecc:	e2 e6       	ldi	r30, 0x62	; 98
+ ece:	f0 e0       	ldi	r31, 0x00	; 0
+ ed0:	61 81       	ldd	r22, Z+1	; 0x01
+ ed2:	80 81       	ld	r24, Z
+ ed4:	0e 94 b0 06 	call	0xd60	; 0xd60 <transmit_cell_digit>
+ ed8:	08 95       	ret
+
+00000eda <main>:
+ *		2. An infinite loop
+ *
+ *-----------------------------------------------------*/
+int main(void){
+	//Program initializations
+	initialize();
+ eda:	0e 94 32 05 	call	0xa64	; 0xa64 <initialize>
+	
+	// Infinite loop 
+    while (1){
+		// When a USART command is complete, execute the corresponding actions
+		if ((cmd & CRLF_flags) == CRLF_flags){
+ ede:	80 91 66 01 	lds	r24, 0x0166	; 0x800166 <cmd>
+ ee2:	80 7c       	andi	r24, 0xC0	; 192
+ ee4:	80 3c       	cpi	r24, 0xC0	; 192
+ ee6:	11 f4       	brne	.+4      	; 0xeec <main+0x12>
+			USART_command_actions();
+ ee8:	0e 94 e1 06 	call	0xdc2	; 0xdc2 <USART_command_actions>
+		}
+		
+		if (state == STATE_SOLVING){
+ eec:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <state>
+ ef0:	81 30       	cpi	r24, 0x01	; 1
+ ef2:	a9 f7       	brne	.-22     	; 0xede <main+0x4>
+			sudoku_solver();
+ ef4:	0e 94 60 00 	call	0xc0	; 0xc0 <sudoku_solver>
+			if ((solver_guard & (1 << 1)) == 0){
+ ef8:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <solver_guard>
+ efc:	81 fd       	sbrc	r24, 1
+ efe:	ef cf       	rjmp	.-34     	; 0xede <main+0x4>
+				state = STATE_IDLE;
+ f00:	10 92 65 00 	sts	0x0065, r1	; 0x800065 <state>
+				transmit_done_response();
+ f04:	0e 94 5e 05 	call	0xabc	; 0xabc <transmit_done_response>
+ f08:	ea cf       	rjmp	.-44     	; 0xede <main+0x4>
+
+00000f0a <__divmodhi4>:
+ f0a:	97 fb       	bst	r25, 7
+ f0c:	07 2e       	mov	r0, r23
+ f0e:	16 f4       	brtc	.+4      	; 0xf14 <__divmodhi4+0xa>
+ f10:	00 94       	com	r0
+ f12:	07 d0       	rcall	.+14     	; 0xf22 <__divmodhi4_neg1>
+ f14:	77 fd       	sbrc	r23, 7
+ f16:	09 d0       	rcall	.+18     	; 0xf2a <__divmodhi4_neg2>
+ f18:	0e 94 9f 07 	call	0xf3e	; 0xf3e <__udivmodhi4>
+ f1c:	07 fc       	sbrc	r0, 7
+ f1e:	05 d0       	rcall	.+10     	; 0xf2a <__divmodhi4_neg2>
+ f20:	3e f4       	brtc	.+14     	; 0xf30 <__divmodhi4_exit>
+
+00000f22 <__divmodhi4_neg1>:
+ f22:	90 95       	com	r25
+ f24:	81 95       	neg	r24
+ f26:	9f 4f       	sbci	r25, 0xFF	; 255
+ f28:	08 95       	ret
+
+00000f2a <__divmodhi4_neg2>:
+ f2a:	70 95       	com	r23
+ f2c:	61 95       	neg	r22
+ f2e:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00000f30 <__divmodhi4_exit>:
+ f30:	08 95       	ret
+
+00000f32 <__tablejump2__>:
+ f32:	ee 0f       	add	r30, r30
+ f34:	ff 1f       	adc	r31, r31
+ f36:	05 90       	lpm	r0, Z+
+ f38:	f4 91       	lpm	r31, Z
+ f3a:	e0 2d       	mov	r30, r0
+ f3c:	09 94       	ijmp
+
+00000f3e <__udivmodhi4>:
+ f3e:	aa 1b       	sub	r26, r26
+ f40:	bb 1b       	sub	r27, r27
+ f42:	51 e1       	ldi	r21, 0x11	; 17
+ f44:	07 c0       	rjmp	.+14     	; 0xf54 <__udivmodhi4_ep>
+
+00000f46 <__udivmodhi4_loop>:
+ f46:	aa 1f       	adc	r26, r26
+ f48:	bb 1f       	adc	r27, r27
+ f4a:	a6 17       	cp	r26, r22
+ f4c:	b7 07       	cpc	r27, r23
+ f4e:	10 f0       	brcs	.+4      	; 0xf54 <__udivmodhi4_ep>
+ f50:	a6 1b       	sub	r26, r22
+ f52:	b7 0b       	sbc	r27, r23
+
+00000f54 <__udivmodhi4_ep>:
+ f54:	88 1f       	adc	r24, r24
+ f56:	99 1f       	adc	r25, r25
+ f58:	5a 95       	dec	r21
+ f5a:	a9 f7       	brne	.-22     	; 0xf46 <__udivmodhi4_loop>
+ f5c:	80 95       	com	r24
+ f5e:	90 95       	com	r25
+ f60:	bc 01       	movw	r22, r24
+ f62:	cd 01       	movw	r24, r26
+ f64:	08 95       	ret
+
+00000f66 <_exit>:
+ f66:	f8 94       	cli
+
+00000f68 <__stop_program>:
+ f68:	ff cf       	rjmp	.-2      	; 0xf68 <__stop_program>
